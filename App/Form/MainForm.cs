@@ -614,6 +614,9 @@ namespace App
             label_UpdateNote.Text = Localization.GetText("ui-updatenote-text");
             groupBox_CustomHttpRequest.Text = Localization.GetText("ui-advanced-http");
             checkBox_EnableHttpRequest.Text = Localization.GetText("ui-advanced-http-enable");
+            label_MoreProperties.Text = Localization.GetText("ui-advanced-http-additional-data");
+            button_AddProperty.Text = Localization.GetText("ui-advanced-http-additional-add");
+            button_RemoveProperty.Text = Localization.GetText("ui-advanced-http-additional-remove");
             checkBox_RequestOnDutyMatched.Text = Localization.GetText("ui-advanced-http-duty-matched");
             checkBox_RequestOnFateOccur.Text = Localization.GetText("ui-advanced-http-fate-occured");
             label_HttpRequestReadme.Text = Localization.GetText("ui-advanced-http-readme");

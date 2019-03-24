@@ -40,9 +40,7 @@
             this.panel_TopSetting = new System.Windows.Forms.Panel();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label_Process = new App.LocalizableLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_UpdateNote = new System.Windows.Forms.GroupBox();
@@ -57,8 +55,14 @@
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
+            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Advanced = new System.Windows.Forms.TabPage();
             this.groupBox_CustomHttpRequest = new System.Windows.Forms.GroupBox();
+            this.textBox_Value = new System.Windows.Forms.TextBox();
+            this.label_MoreProperties = new System.Windows.Forms.Label();
+            this.button_RemoveProperty = new System.Windows.Forms.Button();
+            this.button_AddProperty = new System.Windows.Forms.Button();
+            this.comboBox_Properties = new System.Windows.Forms.ComboBox();
             this.label_HttpRequestReadme = new System.Windows.Forms.Label();
             this.textBox_CustomHttpUrl = new System.Windows.Forms.TextBox();
             this.label_HttpRequestUrl = new System.Windows.Forms.Label();
@@ -98,6 +102,7 @@
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.label_AboutTitle = new App.LocalizableLabel();
+            this.label_Process = new App.LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -216,33 +221,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(22, 22);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // label_Process
-            // 
-            this.label_Process.AutoSize = true;
-            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Process.ForeColor = System.Drawing.Color.Gray;
-            this.label_Process.Location = new System.Drawing.Point(5, 5);
-            this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(101, 17);
-            this.label_Process.TabIndex = 0;
-            this.label_Process.Text = "FFXIV 프로세스";
-            // 
-            // checkBox_Overlay
-            // 
-            this.checkBox_Overlay.AutoSize = true;
-            this.checkBox_Overlay.Checked = true;
-            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
-            this.checkBox_Overlay.Name = "checkBox_Overlay";
-            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
-            this.checkBox_Overlay.TabIndex = 1;
-            this.checkBox_Overlay.Text = "오버레이 사용";
-            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
-            this.checkBox_Overlay.UseVisualStyleBackColor = true;
-            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
             // tabControl
             // 
@@ -419,6 +397,21 @@
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
             // 
+            // checkBox_Overlay
+            // 
+            this.checkBox_Overlay.AutoSize = true;
+            this.checkBox_Overlay.Checked = true;
+            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
+            this.checkBox_Overlay.Name = "checkBox_Overlay";
+            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
+            this.checkBox_Overlay.TabIndex = 1;
+            this.checkBox_Overlay.Text = "오버레이 사용";
+            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
+            this.checkBox_Overlay.UseVisualStyleBackColor = true;
+            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
+            // 
             // tabPage_Advanced
             // 
             this.tabPage_Advanced.BackColor = System.Drawing.SystemColors.Control;
@@ -431,6 +424,11 @@
             // 
             // groupBox_CustomHttpRequest
             // 
+            this.groupBox_CustomHttpRequest.Controls.Add(this.textBox_Value);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.label_MoreProperties);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.button_RemoveProperty);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.button_AddProperty);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.comboBox_Properties);
             this.groupBox_CustomHttpRequest.Controls.Add(this.label_HttpRequestReadme);
             this.groupBox_CustomHttpRequest.Controls.Add(this.textBox_CustomHttpUrl);
             this.groupBox_CustomHttpRequest.Controls.Add(this.label_HttpRequestUrl);
@@ -440,18 +438,63 @@
             this.groupBox_CustomHttpRequest.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_CustomHttpRequest.Location = new System.Drawing.Point(0, 0);
             this.groupBox_CustomHttpRequest.Name = "groupBox_CustomHttpRequest";
-            this.groupBox_CustomHttpRequest.Size = new System.Drawing.Size(426, 189);
+            this.groupBox_CustomHttpRequest.Size = new System.Drawing.Size(426, 264);
             this.groupBox_CustomHttpRequest.TabIndex = 5;
             this.groupBox_CustomHttpRequest.TabStop = false;
             this.groupBox_CustomHttpRequest.Text = "사용자 지정 HTTP 요청";
             // 
+            // textBox_Value
+            // 
+            this.textBox_Value.Location = new System.Drawing.Point(133, 94);
+            this.textBox_Value.Name = "textBox_Value";
+            this.textBox_Value.Size = new System.Drawing.Size(112, 25);
+            this.textBox_Value.TabIndex = 14;
+            // 
+            // label_MoreProperties
+            // 
+            this.label_MoreProperties.AutoSize = true;
+            this.label_MoreProperties.Location = new System.Drawing.Point(6, 48);
+            this.label_MoreProperties.Name = "label_MoreProperties";
+            this.label_MoreProperties.Size = new System.Drawing.Size(65, 17);
+            this.label_MoreProperties.TabIndex = 13;
+            this.label_MoreProperties.Text = "추가 정보";
+            // 
+            // button_RemoveProperty
+            // 
+            this.button_RemoveProperty.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_RemoveProperty.Location = new System.Drawing.Point(72, 68);
+            this.button_RemoveProperty.Name = "button_RemoveProperty";
+            this.button_RemoveProperty.Size = new System.Drawing.Size(60, 20);
+            this.button_RemoveProperty.TabIndex = 12;
+            this.button_RemoveProperty.Text = "삭제";
+            this.button_RemoveProperty.UseVisualStyleBackColor = true;
+            // 
+            // button_AddProperty
+            // 
+            this.button_AddProperty.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_AddProperty.Location = new System.Drawing.Point(6, 68);
+            this.button_AddProperty.Name = "button_AddProperty";
+            this.button_AddProperty.Size = new System.Drawing.Size(60, 20);
+            this.button_AddProperty.TabIndex = 11;
+            this.button_AddProperty.Text = "추가";
+            this.button_AddProperty.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_Properties
+            // 
+            this.comboBox_Properties.FormattingEnabled = true;
+            this.comboBox_Properties.Location = new System.Drawing.Point(6, 94);
+            this.comboBox_Properties.Name = "comboBox_Properties";
+            this.comboBox_Properties.Size = new System.Drawing.Size(121, 25);
+            this.comboBox_Properties.TabIndex = 10;
+            // 
             // label_HttpRequestReadme
             // 
             this.label_HttpRequestReadme.AutoSize = true;
+            this.label_HttpRequestReadme.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label_HttpRequestReadme.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_HttpRequestReadme.Location = new System.Drawing.Point(0, 101);
+            this.label_HttpRequestReadme.Location = new System.Drawing.Point(3, 183);
             this.label_HttpRequestReadme.Name = "label_HttpRequestReadme";
-            this.label_HttpRequestReadme.Size = new System.Drawing.Size(428, 78);
+            this.label_HttpRequestReadme.Size = new System.Drawing.Size(415, 78);
             this.label_HttpRequestReadme.TabIndex = 9;
             this.label_HttpRequestReadme.Text = resources.GetString("label_HttpRequestReadme.Text");
             // 
@@ -478,7 +521,7 @@
             this.checkBox_RequestOnDutyMatched.AutoSize = true;
             this.checkBox_RequestOnDutyMatched.Enabled = false;
             this.checkBox_RequestOnDutyMatched.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_RequestOnDutyMatched.Location = new System.Drawing.Point(6, 53);
+            this.checkBox_RequestOnDutyMatched.Location = new System.Drawing.Point(6, 125);
             this.checkBox_RequestOnDutyMatched.Name = "checkBox_RequestOnDutyMatched";
             this.checkBox_RequestOnDutyMatched.Size = new System.Drawing.Size(158, 19);
             this.checkBox_RequestOnDutyMatched.TabIndex = 6;
@@ -491,7 +534,7 @@
             this.checkBox_RequestOnFateOccur.AutoSize = true;
             this.checkBox_RequestOnFateOccur.Enabled = false;
             this.checkBox_RequestOnFateOccur.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_RequestOnFateOccur.Location = new System.Drawing.Point(6, 75);
+            this.checkBox_RequestOnFateOccur.Location = new System.Drawing.Point(6, 150);
             this.checkBox_RequestOnFateOccur.Name = "checkBox_RequestOnFateOccur";
             this.checkBox_RequestOnFateOccur.Size = new System.Drawing.Size(158, 19);
             this.checkBox_RequestOnFateOccur.TabIndex = 5;
@@ -811,6 +854,18 @@
             this.label_AboutTitle.Text = "VERSION STRING";
             this.label_AboutTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label_Process
+            // 
+            this.label_Process.AutoSize = true;
+            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.ForeColor = System.Drawing.Color.Gray;
+            this.label_Process.Location = new System.Drawing.Point(5, 5);
+            this.label_Process.Name = "label_Process";
+            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.TabIndex = 0;
+            this.label_Process.Text = "FFXIV 프로세스";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -928,6 +983,11 @@
         private System.Windows.Forms.TextBox textBox_CustomHttpUrl;
         private System.Windows.Forms.Label label_HttpRequestUrl;
         private System.Windows.Forms.Label label_HttpRequestReadme;
+        private System.Windows.Forms.ComboBox comboBox_Properties;
+        private System.Windows.Forms.Button button_RemoveProperty;
+        private System.Windows.Forms.Button button_AddProperty;
+        private System.Windows.Forms.Label label_MoreProperties;
+        private System.Windows.Forms.TextBox textBox_Value;
     }
 }
 
