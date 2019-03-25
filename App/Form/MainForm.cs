@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Text;
 
 namespace App
 {
@@ -15,6 +16,7 @@ namespace App
         internal Process FFXIVProcess;
         internal OverlayForm overlayForm;
         internal List<TreeNode> nodes;
+        internal Dictionary<string, string> POSTdata = new Dictionary<string, string>();
 
         public MainForm()
         {
@@ -57,6 +59,10 @@ namespace App
                 checkBox_Overlay.Checked = false;
             }
             networkWorker.notificationPlayer = new System.Media.SoundPlayer();
+            POSTdata.Add("", "");
+            comboBox_Properties.DataSource = new BindingSource(POSTdata, null);
+            comboBox_Properties.DisplayMember = "Key";
+            comboBox_Properties.ValueMember = "Value";
 
             Task.Factory.StartNew(() =>
             {
@@ -343,6 +349,23 @@ namespace App
         {
             Settings.customHttpUrl = textBox_CustomHttpUrl.Text;
             Settings.Save();
+        }
+
+        private void comboBox_Properties_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox_Value.Text = comboBox_Properties.SelectedValue.ToString();
+        }
+
+        private void button_AddProperty_Click(object sender, EventArgs e)
+        {
+            POSTdata.Add(textBox_PropertyName.Text.ToString(), "");
+            comboBox_Properties.DataSource = new BindingSource(POSTdata, null);
+        }
+
+        private void button_RemoveProperty_Click(object sender, EventArgs e)
+        {
+            POSTdata.Remove(textBox_PropertyName.Text);
+            comboBox_Properties.DataSource = new BindingSource(POSTdata, null);
         }
 
         private void checkBox_RequestOnDutyMatched_CheckedChanged(object sender, EventArgs e)

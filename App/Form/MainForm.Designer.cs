@@ -58,6 +58,8 @@
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Advanced = new System.Windows.Forms.TabPage();
             this.groupBox_CustomHttpRequest = new System.Windows.Forms.GroupBox();
+            this.label_PropertyName = new System.Windows.Forms.Label();
+            this.textBox_PropertyName = new System.Windows.Forms.TextBox();
             this.textBox_Value = new System.Windows.Forms.TextBox();
             this.label_MoreProperties = new System.Windows.Forms.Label();
             this.button_RemoveProperty = new System.Windows.Forms.Button();
@@ -424,6 +426,8 @@
             // 
             // groupBox_CustomHttpRequest
             // 
+            this.groupBox_CustomHttpRequest.Controls.Add(this.label_PropertyName);
+            this.groupBox_CustomHttpRequest.Controls.Add(this.textBox_PropertyName);
             this.groupBox_CustomHttpRequest.Controls.Add(this.textBox_Value);
             this.groupBox_CustomHttpRequest.Controls.Add(this.label_MoreProperties);
             this.groupBox_CustomHttpRequest.Controls.Add(this.button_RemoveProperty);
@@ -442,6 +446,22 @@
             this.groupBox_CustomHttpRequest.TabIndex = 5;
             this.groupBox_CustomHttpRequest.TabStop = false;
             this.groupBox_CustomHttpRequest.Text = "사용자 지정 HTTP 요청";
+            // 
+            // label_PropertyName
+            // 
+            this.label_PropertyName.AutoSize = true;
+            this.label_PropertyName.Location = new System.Drawing.Point(6, 69);
+            this.label_PropertyName.Name = "label_PropertyName";
+            this.label_PropertyName.Size = new System.Drawing.Size(65, 17);
+            this.label_PropertyName.TabIndex = 16;
+            this.label_PropertyName.Text = "항목 이름";
+            // 
+            // textBox_PropertyName
+            // 
+            this.textBox_PropertyName.Location = new System.Drawing.Point(74, 66);
+            this.textBox_PropertyName.Name = "textBox_PropertyName";
+            this.textBox_PropertyName.Size = new System.Drawing.Size(112, 25);
+            this.textBox_PropertyName.TabIndex = 15;
             // 
             // textBox_Value
             // 
@@ -462,22 +482,24 @@
             // button_RemoveProperty
             // 
             this.button_RemoveProperty.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button_RemoveProperty.Location = new System.Drawing.Point(72, 68);
+            this.button_RemoveProperty.Location = new System.Drawing.Point(258, 68);
             this.button_RemoveProperty.Name = "button_RemoveProperty";
             this.button_RemoveProperty.Size = new System.Drawing.Size(60, 20);
             this.button_RemoveProperty.TabIndex = 12;
             this.button_RemoveProperty.Text = "삭제";
             this.button_RemoveProperty.UseVisualStyleBackColor = true;
+            this.button_RemoveProperty.Click += new System.EventHandler(this.button_RemoveProperty_Click);
             // 
             // button_AddProperty
             // 
             this.button_AddProperty.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button_AddProperty.Location = new System.Drawing.Point(6, 68);
+            this.button_AddProperty.Location = new System.Drawing.Point(192, 68);
             this.button_AddProperty.Name = "button_AddProperty";
             this.button_AddProperty.Size = new System.Drawing.Size(60, 20);
             this.button_AddProperty.TabIndex = 11;
             this.button_AddProperty.Text = "추가";
             this.button_AddProperty.UseVisualStyleBackColor = true;
+            this.button_AddProperty.Click += new System.EventHandler(this.button_AddProperty_Click);
             // 
             // comboBox_Properties
             // 
@@ -486,6 +508,7 @@
             this.comboBox_Properties.Name = "comboBox_Properties";
             this.comboBox_Properties.Size = new System.Drawing.Size(121, 25);
             this.comboBox_Properties.TabIndex = 10;
+            this.comboBox_Properties.SelectedIndexChanged += new System.EventHandler(this.comboBox_Properties_SelectedIndexChanged);
             // 
             // label_HttpRequestReadme
             // 
@@ -988,6 +1011,8 @@
         private System.Windows.Forms.Button button_AddProperty;
         private System.Windows.Forms.Label label_MoreProperties;
         private System.Windows.Forms.TextBox textBox_Value;
+        private System.Windows.Forms.TextBox textBox_PropertyName;
+        private System.Windows.Forms.Label label_PropertyName;
     }
 }
 
