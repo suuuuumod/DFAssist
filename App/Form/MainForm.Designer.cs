@@ -458,17 +458,19 @@
             // 
             // textBox_PropertyName
             // 
+            this.textBox_PropertyName.Enabled = false;
             this.textBox_PropertyName.Location = new System.Drawing.Point(74, 66);
             this.textBox_PropertyName.Name = "textBox_PropertyName";
             this.textBox_PropertyName.Size = new System.Drawing.Size(112, 25);
-            this.textBox_PropertyName.TabIndex = 15;
+            this.textBox_PropertyName.TabIndex = 3;
             // 
             // textBox_Value
             // 
+            this.textBox_Value.Enabled = false;
             this.textBox_Value.Location = new System.Drawing.Point(133, 94);
             this.textBox_Value.Name = "textBox_Value";
             this.textBox_Value.Size = new System.Drawing.Size(112, 25);
-            this.textBox_Value.TabIndex = 14;
+            this.textBox_Value.TabIndex = 7;
             // 
             // label_MoreProperties
             // 
@@ -481,33 +483,36 @@
             // 
             // button_RemoveProperty
             // 
+            this.button_RemoveProperty.Enabled = false;
             this.button_RemoveProperty.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button_RemoveProperty.Location = new System.Drawing.Point(258, 68);
             this.button_RemoveProperty.Name = "button_RemoveProperty";
             this.button_RemoveProperty.Size = new System.Drawing.Size(60, 20);
-            this.button_RemoveProperty.TabIndex = 12;
+            this.button_RemoveProperty.TabIndex = 5;
             this.button_RemoveProperty.Text = "삭제";
             this.button_RemoveProperty.UseVisualStyleBackColor = true;
             this.button_RemoveProperty.Click += new System.EventHandler(this.button_RemoveProperty_Click);
             // 
             // button_AddProperty
             // 
+            this.button_AddProperty.Enabled = false;
             this.button_AddProperty.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button_AddProperty.Location = new System.Drawing.Point(192, 68);
             this.button_AddProperty.Name = "button_AddProperty";
             this.button_AddProperty.Size = new System.Drawing.Size(60, 20);
-            this.button_AddProperty.TabIndex = 11;
+            this.button_AddProperty.TabIndex = 4;
             this.button_AddProperty.Text = "추가";
             this.button_AddProperty.UseVisualStyleBackColor = true;
             this.button_AddProperty.Click += new System.EventHandler(this.button_AddProperty_Click);
             // 
             // comboBox_Properties
             // 
+            this.comboBox_Properties.Enabled = false;
             this.comboBox_Properties.FormattingEnabled = true;
             this.comboBox_Properties.Location = new System.Drawing.Point(6, 94);
             this.comboBox_Properties.Name = "comboBox_Properties";
             this.comboBox_Properties.Size = new System.Drawing.Size(121, 25);
-            this.comboBox_Properties.TabIndex = 10;
+            this.comboBox_Properties.TabIndex = 6;
             this.comboBox_Properties.SelectedIndexChanged += new System.EventHandler(this.comboBox_Properties_SelectedIndexChanged);
             // 
             // label_HttpRequestReadme
@@ -527,7 +532,7 @@
             this.textBox_CustomHttpUrl.Location = new System.Drawing.Point(45, 20);
             this.textBox_CustomHttpUrl.Name = "textBox_CustomHttpUrl";
             this.textBox_CustomHttpUrl.Size = new System.Drawing.Size(300, 25);
-            this.textBox_CustomHttpUrl.TabIndex = 7;
+            this.textBox_CustomHttpUrl.TabIndex = 1;
             this.textBox_CustomHttpUrl.TextChanged += new System.EventHandler(this.textBox_CustomHttpUrl_TextChanged);
             // 
             // label_HttpRequestUrl
@@ -547,7 +552,7 @@
             this.checkBox_RequestOnDutyMatched.Location = new System.Drawing.Point(6, 125);
             this.checkBox_RequestOnDutyMatched.Name = "checkBox_RequestOnDutyMatched";
             this.checkBox_RequestOnDutyMatched.Size = new System.Drawing.Size(158, 19);
-            this.checkBox_RequestOnDutyMatched.TabIndex = 6;
+            this.checkBox_RequestOnDutyMatched.TabIndex = 8;
             this.checkBox_RequestOnDutyMatched.Text = "던전 매칭 완료시 보내기";
             this.checkBox_RequestOnDutyMatched.UseVisualStyleBackColor = true;
             this.checkBox_RequestOnDutyMatched.CheckedChanged += new System.EventHandler(this.checkBox_RequestOnDutyMatched_CheckedChanged);
@@ -557,10 +562,10 @@
             this.checkBox_RequestOnFateOccur.AutoSize = true;
             this.checkBox_RequestOnFateOccur.Enabled = false;
             this.checkBox_RequestOnFateOccur.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_RequestOnFateOccur.Location = new System.Drawing.Point(6, 150);
+            this.checkBox_RequestOnFateOccur.Location = new System.Drawing.Point(6, 146);
             this.checkBox_RequestOnFateOccur.Name = "checkBox_RequestOnFateOccur";
             this.checkBox_RequestOnFateOccur.Size = new System.Drawing.Size(158, 19);
-            this.checkBox_RequestOnFateOccur.TabIndex = 5;
+            this.checkBox_RequestOnFateOccur.TabIndex = 9;
             this.checkBox_RequestOnFateOccur.Text = "돌발 임무 발생시 보내기";
             this.checkBox_RequestOnFateOccur.UseVisualStyleBackColor = true;
             this.checkBox_RequestOnFateOccur.CheckedChanged += new System.EventHandler(this.checkBox_RequestOnFateOccur_CheckedChanged);
@@ -572,7 +577,7 @@
             this.checkBox_EnableHttpRequest.Location = new System.Drawing.Point(351, 23);
             this.checkBox_EnableHttpRequest.Name = "checkBox_EnableHttpRequest";
             this.checkBox_EnableHttpRequest.Size = new System.Drawing.Size(62, 19);
-            this.checkBox_EnableHttpRequest.TabIndex = 4;
+            this.checkBox_EnableHttpRequest.TabIndex = 2;
             this.checkBox_EnableHttpRequest.Text = "활성화";
             this.checkBox_EnableHttpRequest.UseVisualStyleBackColor = true;
             this.checkBox_EnableHttpRequest.CheckedChanged += new System.EventHandler(this.checkBox_EnableHttpRequest_CheckedChanged);

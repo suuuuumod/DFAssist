@@ -112,6 +112,7 @@ namespace App
             textBox_CustomHttpUrl.Text = Settings.customHttpUrl;
             checkBox_RequestOnDutyMatched.Checked = Settings.requestOnDutyMatched;
             checkBox_RequestOnFateOccur.Checked = Settings.requestOnFateOccured;
+            textBox_Value.Text = ""; // 일시적으로 사용 중인 부분
 
             refresh_Fates();
 
@@ -342,6 +343,11 @@ namespace App
             textBox_CustomHttpUrl.Enabled = @checked;
             checkBox_RequestOnDutyMatched.Enabled = @checked;
             checkBox_RequestOnFateOccur.Enabled = @checked;
+            textBox_PropertyName.Enabled = @checked;
+            button_AddProperty.Enabled = @checked;
+            button_RemoveProperty.Enabled = @checked;
+            comboBox_Properties.Enabled = @checked;
+            textBox_Value.Enabled = @checked;
             Settings.Save();
         }
 
