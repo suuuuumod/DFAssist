@@ -14,6 +14,7 @@ namespace App
         internal SoundPlayer notificationPlayer;
         private SoundPlayer fatePlayer;
         private System.IO.Stream str = Properties.Resources.FFXIV_FATE_Start;
+        public List<int> NetworkCodes = new List<int>();
 
         private void AnalyseFFXIVPacket(byte[] payload)
         {
@@ -148,6 +149,10 @@ namespace App
                     opcode != 0x022F)
                     return;
 #endif
+
+                if (mainForm.testState)
+                    if(!NetworkCodes.Exists(x => x == opcode))
+                        NetworkCodes.Add(opcode);
 
                 var data = message.Skip(32).ToArray();
 

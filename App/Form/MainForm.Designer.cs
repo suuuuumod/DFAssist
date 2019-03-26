@@ -40,9 +40,8 @@
             this.panel_TopSetting = new System.Windows.Forms.Panel();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label_Process = new App.LocalizableLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_UpdateNote = new System.Windows.Forms.GroupBox();
@@ -57,7 +56,15 @@
             this.checkBox_CheatRoullete = new System.Windows.Forms.CheckBox();
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
+            this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Advanced = new System.Windows.Forms.TabPage();
+            this.groupBox_Test = new System.Windows.Forms.GroupBox();
+            this.label_TestState = new System.Windows.Forms.Label();
+            this.checkBox_TestLength = new System.Windows.Forms.CheckBox();
+            this.label1_TestLength = new System.Windows.Forms.Label();
+            this.textBox_TestLength = new System.Windows.Forms.TextBox();
+            this.button_TestEnd = new System.Windows.Forms.Button();
+            this.button_TestStart = new System.Windows.Forms.Button();
             this.groupBox_CustomHttpRequest = new System.Windows.Forms.GroupBox();
             this.label_HttpRequestReadme = new System.Windows.Forms.Label();
             this.textBox_CustomHttpUrl = new System.Windows.Forms.TextBox();
@@ -98,6 +105,7 @@
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.label_AboutTitle = new App.LocalizableLabel();
+            this.label_Process = new App.LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
             this.panel_TopSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,6 +114,7 @@
             this.groupBox_UpdateNote.SuspendLayout();
             this.groupBox_DefaultSet.SuspendLayout();
             this.tabPage_Advanced.SuspendLayout();
+            this.groupBox_Test.SuspendLayout();
             this.groupBox_CustomHttpRequest.SuspendLayout();
             this.tabPage_FATE.SuspendLayout();
             this.menuStrip_FATETab.SuspendLayout();
@@ -216,33 +225,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(22, 22);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // label_Process
-            // 
-            this.label_Process.AutoSize = true;
-            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Process.ForeColor = System.Drawing.Color.Gray;
-            this.label_Process.Location = new System.Drawing.Point(5, 5);
-            this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(101, 17);
-            this.label_Process.TabIndex = 0;
-            this.label_Process.Text = "FFXIV 프로세스";
-            // 
-            // checkBox_Overlay
-            // 
-            this.checkBox_Overlay.AutoSize = true;
-            this.checkBox_Overlay.Checked = true;
-            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
-            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
-            this.checkBox_Overlay.Name = "checkBox_Overlay";
-            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
-            this.checkBox_Overlay.TabIndex = 1;
-            this.checkBox_Overlay.Text = "오버레이 사용";
-            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
-            this.checkBox_Overlay.UseVisualStyleBackColor = true;
-            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
             // 
             // tabControl
             // 
@@ -419,15 +401,104 @@
             this.checkBox_StartupShow.UseVisualStyleBackColor = true;
             this.checkBox_StartupShow.CheckedChanged += new System.EventHandler(this.checkBox_StartupShow_CheckedChanged);
             // 
+            // checkBox_Overlay
+            // 
+            this.checkBox_Overlay.AutoSize = true;
+            this.checkBox_Overlay.Checked = true;
+            this.checkBox_Overlay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Overlay.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.checkBox_Overlay.Location = new System.Drawing.Point(6, 23);
+            this.checkBox_Overlay.Name = "checkBox_Overlay";
+            this.checkBox_Overlay.Size = new System.Drawing.Size(102, 19);
+            this.checkBox_Overlay.TabIndex = 1;
+            this.checkBox_Overlay.Text = "오버레이 사용";
+            this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
+            this.checkBox_Overlay.UseVisualStyleBackColor = true;
+            this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
+            // 
             // tabPage_Advanced
             // 
             this.tabPage_Advanced.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Advanced.Controls.Add(this.groupBox_Test);
             this.tabPage_Advanced.Controls.Add(this.groupBox_CustomHttpRequest);
             this.tabPage_Advanced.Location = new System.Drawing.Point(114, 4);
             this.tabPage_Advanced.Name = "tabPage_Advanced";
             this.tabPage_Advanced.Size = new System.Drawing.Size(426, 263);
             this.tabPage_Advanced.TabIndex = 4;
             this.tabPage_Advanced.Text = "고급";
+            // 
+            // groupBox_Test
+            // 
+            this.groupBox_Test.Controls.Add(this.label_TestState);
+            this.groupBox_Test.Controls.Add(this.checkBox_TestLength);
+            this.groupBox_Test.Controls.Add(this.label1_TestLength);
+            this.groupBox_Test.Controls.Add(this.textBox_TestLength);
+            this.groupBox_Test.Controls.Add(this.button_TestEnd);
+            this.groupBox_Test.Controls.Add(this.button_TestStart);
+            this.groupBox_Test.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_Test.Location = new System.Drawing.Point(0, 189);
+            this.groupBox_Test.Name = "groupBox_Test";
+            this.groupBox_Test.Size = new System.Drawing.Size(426, 68);
+            this.groupBox_Test.TabIndex = 6;
+            this.groupBox_Test.TabStop = false;
+            this.groupBox_Test.Text = "테스트";
+            // 
+            // label_TestState
+            // 
+            this.label_TestState.AutoSize = true;
+            this.label_TestState.Location = new System.Drawing.Point(347, 30);
+            this.label_TestState.Name = "label_TestState";
+            this.label_TestState.Size = new System.Drawing.Size(78, 17);
+            this.label_TestState.TabIndex = 15;
+            this.label_TestState.Text = "테스트 상태";
+            // 
+            // checkBox_TestLength
+            // 
+            this.checkBox_TestLength.AutoSize = true;
+            this.checkBox_TestLength.Location = new System.Drawing.Point(185, 26);
+            this.checkBox_TestLength.Name = "checkBox_TestLength";
+            this.checkBox_TestLength.Size = new System.Drawing.Size(84, 21);
+            this.checkBox_TestLength.TabIndex = 14;
+            this.checkBox_TestLength.Text = "시간 제한";
+            this.checkBox_TestLength.UseVisualStyleBackColor = true;
+            this.checkBox_TestLength.CheckedChanged += new System.EventHandler(this.checkBox_TestLength_CheckedChanged);
+            // 
+            // label1_TestLength
+            // 
+            this.label1_TestLength.AutoSize = true;
+            this.label1_TestLength.Location = new System.Drawing.Point(164, 27);
+            this.label1_TestLength.Name = "label1_TestLength";
+            this.label1_TestLength.Size = new System.Drawing.Size(21, 17);
+            this.label1_TestLength.TabIndex = 13;
+            this.label1_TestLength.Text = "초";
+            // 
+            // textBox_TestLength
+            // 
+            this.textBox_TestLength.Enabled = false;
+            this.textBox_TestLength.Location = new System.Drawing.Point(87, 24);
+            this.textBox_TestLength.Name = "textBox_TestLength";
+            this.textBox_TestLength.Size = new System.Drawing.Size(77, 25);
+            this.textBox_TestLength.TabIndex = 12;
+            // 
+            // button_TestEnd
+            // 
+            this.button_TestEnd.Location = new System.Drawing.Point(269, 24);
+            this.button_TestEnd.Name = "button_TestEnd";
+            this.button_TestEnd.Size = new System.Drawing.Size(75, 23);
+            this.button_TestEnd.TabIndex = 11;
+            this.button_TestEnd.Text = "종료";
+            this.button_TestEnd.UseVisualStyleBackColor = true;
+            this.button_TestEnd.Click += new System.EventHandler(this.button_TestEnd_Click);
+            // 
+            // button_TestStart
+            // 
+            this.button_TestStart.Location = new System.Drawing.Point(6, 24);
+            this.button_TestStart.Name = "button_TestStart";
+            this.button_TestStart.Size = new System.Drawing.Size(75, 23);
+            this.button_TestStart.TabIndex = 10;
+            this.button_TestStart.Text = "시작";
+            this.button_TestStart.UseVisualStyleBackColor = true;
+            this.button_TestStart.Click += new System.EventHandler(this.button_TestStart_Click);
             // 
             // groupBox_CustomHttpRequest
             // 
@@ -811,6 +882,18 @@
             this.label_AboutTitle.Text = "VERSION STRING";
             this.label_AboutTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label_Process
+            // 
+            this.label_Process.AutoSize = true;
+            this.label_Process.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label_Process.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_Process.ForeColor = System.Drawing.Color.Gray;
+            this.label_Process.Location = new System.Drawing.Point(5, 5);
+            this.label_Process.Name = "label_Process";
+            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.TabIndex = 0;
+            this.label_Process.Text = "FFXIV 프로세스";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -843,6 +926,8 @@
             this.groupBox_DefaultSet.ResumeLayout(false);
             this.groupBox_DefaultSet.PerformLayout();
             this.tabPage_Advanced.ResumeLayout(false);
+            this.groupBox_Test.ResumeLayout(false);
+            this.groupBox_Test.PerformLayout();
             this.groupBox_CustomHttpRequest.ResumeLayout(false);
             this.groupBox_CustomHttpRequest.PerformLayout();
             this.tabPage_FATE.ResumeLayout(false);
@@ -928,6 +1013,14 @@
         private System.Windows.Forms.TextBox textBox_CustomHttpUrl;
         private System.Windows.Forms.Label label_HttpRequestUrl;
         private System.Windows.Forms.Label label_HttpRequestReadme;
+        private System.Windows.Forms.GroupBox groupBox_Test;
+        private System.Windows.Forms.Button button_TestEnd;
+        private System.Windows.Forms.Button button_TestStart;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label label1_TestLength;
+        private System.Windows.Forms.TextBox textBox_TestLength;
+        private System.Windows.Forms.CheckBox checkBox_TestLength;
+        private System.Windows.Forms.Label label_TestState;
     }
 }
 

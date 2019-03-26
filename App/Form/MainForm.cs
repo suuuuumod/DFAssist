@@ -16,6 +16,8 @@ namespace App
         internal OverlayForm overlayForm;
         internal List<TreeNode> nodes;
 
+        public bool testState = false;
+
         public MainForm()
         {
             Settings.Load();
@@ -343,6 +345,45 @@ namespace App
         {
             Settings.customHttpUrl = textBox_CustomHttpUrl.Text;
             Settings.Save();
+        }
+
+        private void checkBox_TestLength_CheckedChanged(object sender, EventArgs e)
+        {
+            var @checked = checkBox_TestLength.Checked;
+            textBox_TestLength.Enabled = @checked;
+        }
+
+        private void button_TestStart_Click(object sender, EventArgs e)
+        {
+            testState = true;
+            networkWorker.NetworkCodes.RemoveRange(0, networkWorker.NetworkCodes.Count);
+            label_TestState.Text = "테스트 중";
+            if (checkBox_TestLength.Checked)
+            {
+                int timeout = Int32.Parse(textBox_TestLength.Text);
+                Task.Factory.StartNew(() =>
+                {
+                    Thread.Sleep(timeout * 1000);
+                    endTest();
+                });
+            }
+        }
+
+        private void button_TestEnd_Click(object sender, EventArgs e)
+        {
+            endTest();
+        }
+
+        private void endTest()
+        {
+            testState = false;
+            label_TestState.Text = "테스트 중지";
+            Log.I("테스트 결과 출력");
+            for (int i = 0; i< networkWorker.NetworkCodes.Count; i++)
+            {
+                Log.I(networkWorker.NetworkCodes[i].ToString());
+            }
+            Log.I("테스트 결과 출력 완료");
         }
 
         private void checkBox_RequestOnDutyMatched_CheckedChanged(object sender, EventArgs e)
