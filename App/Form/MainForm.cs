@@ -354,11 +354,23 @@ namespace App
             textBox_TestLength.Enabled = @checked;
         }
 
+        private void checkBox_filterOpcode_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_OpcodeFilterList.Enabled = checkBox_filterOpcode.Checked;
+        }
+
         private void button_TestStart_Click(object sender, EventArgs e)
         {
+            if(!checkBox_Opcode.Checked && !checkBox_OpcodeFilter.Checked && !checkBox_OpcodeData.Checked)
+            {
+                MessageBox.Show("위 테스트 사항 중 최소 한 개는 선택해야 합니다.");
+                return;
+            }
             checkBox_Opcode.Enabled = false;
             checkBox_OpcodeData.Enabled = false;
             textBox_Opcode.Enabled = false;
+            button_TestStart.Enabled = false;
+            button_TestEnd.Enabled = true;
             if (checkBox_Opcode.Checked)
             {
                 codeListTestState = true;
@@ -369,16 +381,23 @@ namespace App
                 opcodeDataTestState = true;
                 networkWorker.opcodeData.RemoveRange(0, networkWorker.opcodeData.Count);
             }
+            label_TestState.Text = "테스트 진행";
             if (checkBox_TestLength.Checked)
             {
-                int timeout = Int32.Parse(textBox_TestLength.Text);
-                Task.Factory.StartNew(() =>
+                try
                 {
-                    Thread.Sleep(timeout * 1000);
-                    endTest();
-                });
+                    int timeout = Int32.Parse(textBox_TestLength.Text);
+                    Task.Factory.StartNew(() =>
+                    {
+                        Thread.Sleep(timeout * 1000);
+                        endTest();
+                    });
+                }
+                catch
+                {
+                    MessageBox.Show("시간 제한 값 오류. 시간 제한을 설정하지 않습니다.");
+                }
             }
-            label_TestState.Text = "테스트 중";
         }
 
         private void button_TestEnd_Click(object sender, EventArgs e)
@@ -391,6 +410,8 @@ namespace App
             checkBox_Opcode.Enabled = true;
             checkBox_OpcodeData.Enabled = true;
             textBox_Opcode.Enabled = true;
+            button_TestStart.Enabled = true;
+            button_TestEnd.Enabled = false;
             if (codeListTestState)
             {
                 codeListTestState = false;

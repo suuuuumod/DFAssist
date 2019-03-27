@@ -41,7 +41,6 @@
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
             this.groupBox_UpdateNote = new System.Windows.Forms.GroupBox();
@@ -99,8 +98,8 @@
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
             this.tabPage_test = new System.Windows.Forms.TabPage();
             this.groupBox_TestResult = new System.Windows.Forms.GroupBox();
+            this.checkBox_filterOpcode = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox_OpcodeFilterList = new System.Windows.Forms.TextBox();
             this.label_OpcodeFilterPass = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -114,6 +113,7 @@
             this.label_TestState = new System.Windows.Forms.Label();
             this.textBox_TestLength = new System.Windows.Forms.TextBox();
             this.groupBox_TestList = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox_OpcodeFilter = new System.Windows.Forms.TextBox();
             this.checkBox_OpcodeFilter = new System.Windows.Forms.CheckBox();
             this.textBox_Opcode = new System.Windows.Forms.TextBox();
@@ -829,46 +829,50 @@
             // 
             // groupBox_TestResult
             // 
+            this.groupBox_TestResult.Controls.Add(this.checkBox_filterOpcode);
             this.groupBox_TestResult.Controls.Add(this.label4);
-            this.groupBox_TestResult.Controls.Add(this.label3);
             this.groupBox_TestResult.Controls.Add(this.textBox_OpcodeFilterList);
             this.groupBox_TestResult.Controls.Add(this.label_OpcodeFilterPass);
             this.groupBox_TestResult.Controls.Add(this.label2);
             this.groupBox_TestResult.Controls.Add(this.label_OpcodeDataLength);
             this.groupBox_TestResult.Controls.Add(this.label1);
             this.groupBox_TestResult.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_TestResult.Location = new System.Drawing.Point(0, 154);
+            this.groupBox_TestResult.Location = new System.Drawing.Point(0, 148);
             this.groupBox_TestResult.Name = "groupBox_TestResult";
-            this.groupBox_TestResult.Size = new System.Drawing.Size(426, 113);
+            this.groupBox_TestResult.Size = new System.Drawing.Size(426, 119);
             this.groupBox_TestResult.TabIndex = 10;
             this.groupBox_TestResult.TabStop = false;
             this.groupBox_TestResult.Text = "Opcode Data 테스트 결과";
+            // 
+            // checkBox_filterOpcode
+            // 
+            this.checkBox_filterOpcode.AutoSize = true;
+            this.checkBox_filterOpcode.Location = new System.Drawing.Point(6, 62);
+            this.checkBox_filterOpcode.Name = "checkBox_filterOpcode";
+            this.checkBox_filterOpcode.Size = new System.Drawing.Size(186, 21);
+            this.checkBox_filterOpcode.TabIndex = 10;
+            this.checkBox_filterOpcode.Text = "테스트 제외 opcode 목록: ";
+            this.checkBox_filterOpcode.UseVisualStyleBackColor = true;
+            this.checkBox_filterOpcode.CheckedChanged += new System.EventHandler(this.checkBox_filterOpcode_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(7, 79);
+            this.label4.Location = new System.Drawing.Point(6, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "(쉼표(,)로 구분)";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "테스트 제외 opcode  목록: ";
-            // 
             // textBox_OpcodeFilterList
             // 
-            this.textBox_OpcodeFilterList.Location = new System.Drawing.Point(181, 62);
+            this.textBox_OpcodeFilterList.Enabled = false;
+            this.textBox_OpcodeFilterList.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox_OpcodeFilterList.Location = new System.Drawing.Point(193, 61);
             this.textBox_OpcodeFilterList.Name = "textBox_OpcodeFilterList";
-            this.textBox_OpcodeFilterList.Size = new System.Drawing.Size(239, 25);
-            this.textBox_OpcodeFilterList.TabIndex = 10;
+            this.textBox_OpcodeFilterList.Size = new System.Drawing.Size(233, 22);
+            this.textBox_OpcodeFilterList.TabIndex = 11;
             // 
             // label_OpcodeFilterPass
             // 
@@ -884,9 +888,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 17);
+            this.label2.Size = new System.Drawing.Size(127, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Opcode filter 통과: ";
+            this.label2.Text = "Opcode Filter 통과: ";
             // 
             // label_OpcodeDataLength
             // 
@@ -915,7 +919,7 @@
             this.groupBox_TestStartEnd.Controls.Add(this.label_TestState);
             this.groupBox_TestStartEnd.Controls.Add(this.textBox_TestLength);
             this.groupBox_TestStartEnd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_TestStartEnd.Location = new System.Drawing.Point(0, 99);
+            this.groupBox_TestStartEnd.Location = new System.Drawing.Point(0, 93);
             this.groupBox_TestStartEnd.Name = "groupBox_TestStartEnd";
             this.groupBox_TestStartEnd.Size = new System.Drawing.Size(426, 55);
             this.groupBox_TestStartEnd.TabIndex = 9;
@@ -945,6 +949,7 @@
             // 
             // button_TestEnd
             // 
+            this.button_TestEnd.Enabled = false;
             this.button_TestEnd.Location = new System.Drawing.Point(266, 24);
             this.button_TestEnd.Name = "button_TestEnd";
             this.button_TestEnd.Size = new System.Drawing.Size(75, 23);
@@ -974,13 +979,15 @@
             // textBox_TestLength
             // 
             this.textBox_TestLength.Enabled = false;
-            this.textBox_TestLength.Location = new System.Drawing.Point(84, 24);
+            this.textBox_TestLength.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox_TestLength.Location = new System.Drawing.Point(83, 24);
             this.textBox_TestLength.Name = "textBox_TestLength";
-            this.textBox_TestLength.Size = new System.Drawing.Size(77, 25);
+            this.textBox_TestLength.Size = new System.Drawing.Size(77, 23);
             this.textBox_TestLength.TabIndex = 7;
             // 
             // groupBox_TestList
             // 
+            this.groupBox_TestList.Controls.Add(this.label3);
             this.groupBox_TestList.Controls.Add(this.textBox_OpcodeFilter);
             this.groupBox_TestList.Controls.Add(this.checkBox_OpcodeFilter);
             this.groupBox_TestList.Controls.Add(this.textBox_Opcode);
@@ -990,15 +997,24 @@
             this.groupBox_TestList.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_TestList.Location = new System.Drawing.Point(0, 0);
             this.groupBox_TestList.Name = "groupBox_TestList";
-            this.groupBox_TestList.Size = new System.Drawing.Size(426, 99);
+            this.groupBox_TestList.Size = new System.Drawing.Size(426, 93);
             this.groupBox_TestList.TabIndex = 7;
             this.groupBox_TestList.TabStop = false;
             this.groupBox_TestList.Text = "테스트 목록";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(196, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "포함되어 있는 값:";
+            // 
             // textBox_OpcodeFilter
             // 
             this.textBox_OpcodeFilter.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_OpcodeFilter.Location = new System.Drawing.Point(196, 46);
+            this.textBox_OpcodeFilter.Location = new System.Drawing.Point(314, 38);
             this.textBox_OpcodeFilter.Name = "textBox_OpcodeFilter";
             this.textBox_OpcodeFilter.Size = new System.Drawing.Size(100, 23);
             this.textBox_OpcodeFilter.TabIndex = 3;
@@ -1006,7 +1022,7 @@
             // checkBox_OpcodeFilter
             // 
             this.checkBox_OpcodeFilter.AutoSize = true;
-            this.checkBox_OpcodeFilter.Location = new System.Drawing.Point(9, 47);
+            this.checkBox_OpcodeFilter.Location = new System.Drawing.Point(9, 42);
             this.checkBox_OpcodeFilter.Name = "checkBox_OpcodeFilter";
             this.checkBox_OpcodeFilter.Size = new System.Drawing.Size(181, 21);
             this.checkBox_OpcodeFilter.TabIndex = 2;
@@ -1016,7 +1032,7 @@
             // textBox_Opcode
             // 
             this.textBox_Opcode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_Opcode.Location = new System.Drawing.Point(209, 70);
+            this.textBox_Opcode.Location = new System.Drawing.Point(257, 62);
             this.textBox_Opcode.Name = "textBox_Opcode";
             this.textBox_Opcode.Size = new System.Drawing.Size(100, 23);
             this.textBox_Opcode.TabIndex = 5;
@@ -1024,26 +1040,26 @@
             // checkBox_OpcodeData
             // 
             this.checkBox_OpcodeData.AutoSize = true;
-            this.checkBox_OpcodeData.Location = new System.Drawing.Point(9, 68);
+            this.checkBox_OpcodeData.Location = new System.Drawing.Point(9, 63);
             this.checkBox_OpcodeData.Name = "checkBox_OpcodeData";
-            this.checkBox_OpcodeData.Size = new System.Drawing.Size(135, 21);
+            this.checkBox_OpcodeData.Size = new System.Drawing.Size(148, 21);
             this.checkBox_OpcodeData.TabIndex = 4;
-            this.checkBox_OpcodeData.Text = "opcode Data 확인";
+            this.checkBox_OpcodeData.Text = "opcode의 Data 체크";
             this.checkBox_OpcodeData.UseVisualStyleBackColor = true;
             // 
             // label_Opcode
             // 
             this.label_Opcode.AutoSize = true;
-            this.label_Opcode.Location = new System.Drawing.Point(150, 71);
+            this.label_Opcode.Location = new System.Drawing.Point(161, 66);
             this.label_Opcode.Name = "label_Opcode";
-            this.label_Opcode.Size = new System.Drawing.Size(53, 17);
+            this.label_Opcode.Size = new System.Drawing.Size(100, 17);
             this.label_Opcode.TabIndex = 1;
-            this.label_Opcode.Text = "opcode";
+            this.label_Opcode.Text = "체크할 opcode:";
             // 
             // checkBox_Opcode
             // 
             this.checkBox_Opcode.AutoSize = true;
-            this.checkBox_Opcode.Location = new System.Drawing.Point(9, 26);
+            this.checkBox_Opcode.Location = new System.Drawing.Point(9, 21);
             this.checkBox_Opcode.Name = "checkBox_Opcode";
             this.checkBox_Opcode.Size = new System.Drawing.Size(134, 21);
             this.checkBox_Opcode.TabIndex = 1;
@@ -1199,7 +1215,6 @@
         private System.Windows.Forms.TextBox textBox_CustomHttpUrl;
         private System.Windows.Forms.Label label_HttpRequestUrl;
         private System.Windows.Forms.Label label_HttpRequestReadme;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.TabPage tabPage_test;
         private System.Windows.Forms.GroupBox groupBox_TestList;
         private System.Windows.Forms.Label label_TestState;
@@ -1220,9 +1235,10 @@
         public System.Windows.Forms.TextBox textBox_OpcodeFilter;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label_OpcodeFilterPass;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox textBox_OpcodeFilterList;
+        public System.Windows.Forms.CheckBox checkBox_filterOpcode;
+        private System.Windows.Forms.Label label3;
     }
 }
 

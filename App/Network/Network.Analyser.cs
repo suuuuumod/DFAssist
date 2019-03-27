@@ -155,11 +155,23 @@ namespace App
 
 
                 // skip할 opcode 체크하는 부분
-                string[] filterList = mainForm.textBox_OpcodeFilterList.Text.Split(',');
                 bool skip = false;
-                for (int i = 0; i < filterList.Length; i++)
-                    if (Int32.Parse(filterList[i]) == opcode)
-                        skip = true;
+                if (mainForm.checkBox_filterOpcode.Checked)
+                {
+                    string[] filterList = mainForm.textBox_OpcodeFilterList.Text.Split(',');
+                    for (int i = 0; i < filterList.Length; i++)
+                    {
+                        try
+                        {
+                            if (Int32.Parse(filterList[i]) == opcode)
+                                skip = true;
+                        }
+                        catch
+                        {
+                            Log.I("옳바르지 않은 opcode 필터 리스트입니다.");
+                        }
+                    }
+                }
 
 
                 if (!skip)
@@ -185,18 +197,28 @@ namespace App
                     
                     // opcode Data 정보 뽑아내는 부분
                     if (mainForm.opcodeDataTestState)
-                        if (opcode == Int32.Parse(mainForm.textBox_Opcode.Text))
+                    {
+                        try
                         {
-                            opcodeData.RemoveRange(0, opcodeData.Count);
-                            mainForm.label_OpcodeDataLength.Text = data.Length.ToString();
-                            Log.I("opcode Data 시작");
-                            for (int i = 0; i < data.Length; i++)
+
+                            if (opcode == Int32.Parse(mainForm.textBox_Opcode.Text))
                             {
-                                opcodeData.Add(data[i]);
-                                Log.I(i + "번째: " + data[i].ToString());
+                                opcodeData.RemoveRange(0, opcodeData.Count);
+                                mainForm.label_OpcodeDataLength.Text = data.Length.ToString();
+                                Log.I("opcode Data 시작");
+                                for (int i = 0; i < data.Length; i++)
+                                {
+                                    opcodeData.Add(data[i]);
+                                    Log.I(i + "번째: " + data[i].ToString());
+                                }
+                                Log.I("opcode Data 끝");
                             }
-                            Log.I("opcode Data 끝");
                         }
+                        catch
+                        {
+                            
+                        }
+                    }
                 }
 
 
