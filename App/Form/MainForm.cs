@@ -16,7 +16,8 @@ namespace App
         internal OverlayForm overlayForm;
         internal List<TreeNode> nodes;
 
-        public bool testState = false;
+        public bool codeListTestState = false;
+        public bool opcodeDataTestState = false;
 
         public MainForm()
         {
@@ -355,9 +356,19 @@ namespace App
 
         private void button_TestStart_Click(object sender, EventArgs e)
         {
-            testState = true;
-            networkWorker.NetworkCodes.RemoveRange(0, networkWorker.NetworkCodes.Count);
-            label_TestState.Text = "테스트 중";
+            checkBox_Opcode.Enabled = false;
+            checkBox_OpcodeData.Enabled = false;
+            textBox_Opcode.Enabled = false;
+            if (checkBox_Opcode.Checked)
+            {
+                codeListTestState = true;
+                networkWorker.networkCodes.RemoveRange(0, networkWorker.networkCodes.Count);
+            }
+            if (checkBox_OpcodeData.Checked)
+            {
+                opcodeDataTestState = true;
+                networkWorker.opcodeData.RemoveRange(0, networkWorker.opcodeData.Count);
+            }
             if (checkBox_TestLength.Checked)
             {
                 int timeout = Int32.Parse(textBox_TestLength.Text);
@@ -367,6 +378,7 @@ namespace App
                     endTest();
                 });
             }
+            label_TestState.Text = "테스트 중";
         }
 
         private void button_TestEnd_Click(object sender, EventArgs e)
@@ -376,14 +388,24 @@ namespace App
 
         private void endTest()
         {
-            testState = false;
-            label_TestState.Text = "테스트 중지";
-            Log.I("테스트 결과 출력");
-            for (int i = 0; i< networkWorker.NetworkCodes.Count; i++)
+            checkBox_Opcode.Enabled = true;
+            checkBox_OpcodeData.Enabled = true;
+            textBox_Opcode.Enabled = true;
+            if (codeListTestState)
             {
-                Log.I(networkWorker.NetworkCodes[i].ToString());
+                codeListTestState = false;
+                Log.I("opcode 테스트 결과 출력");
+                for (int i = 0; i < networkWorker.networkCodes.Count; i++)
+                {
+                    Log.I(networkWorker.networkCodes[i].ToString());
+                }
+                Log.I("opcode 테스트 결과 출력 완료");
             }
-            Log.I("테스트 결과 출력 완료");
+            if (opcodeDataTestState)
+            {
+                opcodeDataTestState = false;
+            }
+            label_TestState.Text = "테스트 중지";
         }
 
         private void checkBox_RequestOnDutyMatched_CheckedChanged(object sender, EventArgs e)

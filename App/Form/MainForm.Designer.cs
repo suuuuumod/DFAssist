@@ -58,13 +58,6 @@
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
             this.tabPage_Advanced = new System.Windows.Forms.TabPage();
-            this.groupBox_Test = new System.Windows.Forms.GroupBox();
-            this.label_TestState = new System.Windows.Forms.Label();
-            this.checkBox_TestLength = new System.Windows.Forms.CheckBox();
-            this.label1_TestLength = new System.Windows.Forms.Label();
-            this.textBox_TestLength = new System.Windows.Forms.TextBox();
-            this.button_TestEnd = new System.Windows.Forms.Button();
-            this.button_TestStart = new System.Windows.Forms.Button();
             this.groupBox_CustomHttpRequest = new System.Windows.Forms.GroupBox();
             this.label_HttpRequestReadme = new System.Windows.Forms.Label();
             this.textBox_CustomHttpUrl = new System.Windows.Forms.TextBox();
@@ -104,6 +97,29 @@
             this.tabPage_Info = new System.Windows.Forms.TabPage();
             this.label_About = new App.LocalizableLabel();
             this.linkLabel_GitHub = new System.Windows.Forms.LinkLabel();
+            this.tabPage_test = new System.Windows.Forms.TabPage();
+            this.groupBox_TestResult = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox_OpcodeFilterList = new System.Windows.Forms.TextBox();
+            this.label_OpcodeFilterPass = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_OpcodeDataLength = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox_TestStartEnd = new System.Windows.Forms.GroupBox();
+            this.button_TestStart = new System.Windows.Forms.Button();
+            this.checkBox_TestLength = new System.Windows.Forms.CheckBox();
+            this.button_TestEnd = new System.Windows.Forms.Button();
+            this.label1_TestLength = new System.Windows.Forms.Label();
+            this.label_TestState = new System.Windows.Forms.Label();
+            this.textBox_TestLength = new System.Windows.Forms.TextBox();
+            this.groupBox_TestList = new System.Windows.Forms.GroupBox();
+            this.textBox_OpcodeFilter = new System.Windows.Forms.TextBox();
+            this.checkBox_OpcodeFilter = new System.Windows.Forms.CheckBox();
+            this.textBox_Opcode = new System.Windows.Forms.TextBox();
+            this.checkBox_OpcodeData = new System.Windows.Forms.CheckBox();
+            this.label_Opcode = new System.Windows.Forms.Label();
+            this.checkBox_Opcode = new System.Windows.Forms.CheckBox();
             this.label_AboutTitle = new App.LocalizableLabel();
             this.label_Process = new App.LocalizableLabel();
             this.contextMenuStrip.SuspendLayout();
@@ -114,7 +130,6 @@
             this.groupBox_UpdateNote.SuspendLayout();
             this.groupBox_DefaultSet.SuspendLayout();
             this.tabPage_Advanced.SuspendLayout();
-            this.groupBox_Test.SuspendLayout();
             this.groupBox_CustomHttpRequest.SuspendLayout();
             this.tabPage_FATE.SuspendLayout();
             this.menuStrip_FATETab.SuspendLayout();
@@ -122,6 +137,10 @@
             this.panel_LogCover.SuspendLayout();
             this.menuStrip_LogTab.SuspendLayout();
             this.tabPage_Info.SuspendLayout();
+            this.tabPage_test.SuspendLayout();
+            this.groupBox_TestResult.SuspendLayout();
+            this.groupBox_TestStartEnd.SuspendLayout();
+            this.groupBox_TestList.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_ResetProcess
@@ -234,6 +253,7 @@
             this.tabControl.Controls.Add(this.tabPage_FATE);
             this.tabControl.Controls.Add(this.tabPage_Log);
             this.tabControl.Controls.Add(this.tabPage_Info);
+            this.tabControl.Controls.Add(this.tabPage_test);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ItemSize = new System.Drawing.Size(30, 110);
             this.tabControl.Location = new System.Drawing.Point(0, 27);
@@ -419,86 +439,12 @@
             // tabPage_Advanced
             // 
             this.tabPage_Advanced.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Advanced.Controls.Add(this.groupBox_Test);
             this.tabPage_Advanced.Controls.Add(this.groupBox_CustomHttpRequest);
             this.tabPage_Advanced.Location = new System.Drawing.Point(114, 4);
             this.tabPage_Advanced.Name = "tabPage_Advanced";
             this.tabPage_Advanced.Size = new System.Drawing.Size(426, 263);
             this.tabPage_Advanced.TabIndex = 4;
             this.tabPage_Advanced.Text = "고급";
-            // 
-            // groupBox_Test
-            // 
-            this.groupBox_Test.Controls.Add(this.label_TestState);
-            this.groupBox_Test.Controls.Add(this.checkBox_TestLength);
-            this.groupBox_Test.Controls.Add(this.label1_TestLength);
-            this.groupBox_Test.Controls.Add(this.textBox_TestLength);
-            this.groupBox_Test.Controls.Add(this.button_TestEnd);
-            this.groupBox_Test.Controls.Add(this.button_TestStart);
-            this.groupBox_Test.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_Test.Location = new System.Drawing.Point(0, 189);
-            this.groupBox_Test.Name = "groupBox_Test";
-            this.groupBox_Test.Size = new System.Drawing.Size(426, 68);
-            this.groupBox_Test.TabIndex = 6;
-            this.groupBox_Test.TabStop = false;
-            this.groupBox_Test.Text = "테스트";
-            // 
-            // label_TestState
-            // 
-            this.label_TestState.AutoSize = true;
-            this.label_TestState.Location = new System.Drawing.Point(347, 30);
-            this.label_TestState.Name = "label_TestState";
-            this.label_TestState.Size = new System.Drawing.Size(78, 17);
-            this.label_TestState.TabIndex = 15;
-            this.label_TestState.Text = "테스트 상태";
-            // 
-            // checkBox_TestLength
-            // 
-            this.checkBox_TestLength.AutoSize = true;
-            this.checkBox_TestLength.Location = new System.Drawing.Point(185, 26);
-            this.checkBox_TestLength.Name = "checkBox_TestLength";
-            this.checkBox_TestLength.Size = new System.Drawing.Size(84, 21);
-            this.checkBox_TestLength.TabIndex = 14;
-            this.checkBox_TestLength.Text = "시간 제한";
-            this.checkBox_TestLength.UseVisualStyleBackColor = true;
-            this.checkBox_TestLength.CheckedChanged += new System.EventHandler(this.checkBox_TestLength_CheckedChanged);
-            // 
-            // label1_TestLength
-            // 
-            this.label1_TestLength.AutoSize = true;
-            this.label1_TestLength.Location = new System.Drawing.Point(164, 27);
-            this.label1_TestLength.Name = "label1_TestLength";
-            this.label1_TestLength.Size = new System.Drawing.Size(21, 17);
-            this.label1_TestLength.TabIndex = 13;
-            this.label1_TestLength.Text = "초";
-            // 
-            // textBox_TestLength
-            // 
-            this.textBox_TestLength.Enabled = false;
-            this.textBox_TestLength.Location = new System.Drawing.Point(87, 24);
-            this.textBox_TestLength.Name = "textBox_TestLength";
-            this.textBox_TestLength.Size = new System.Drawing.Size(77, 25);
-            this.textBox_TestLength.TabIndex = 12;
-            // 
-            // button_TestEnd
-            // 
-            this.button_TestEnd.Location = new System.Drawing.Point(269, 24);
-            this.button_TestEnd.Name = "button_TestEnd";
-            this.button_TestEnd.Size = new System.Drawing.Size(75, 23);
-            this.button_TestEnd.TabIndex = 11;
-            this.button_TestEnd.Text = "종료";
-            this.button_TestEnd.UseVisualStyleBackColor = true;
-            this.button_TestEnd.Click += new System.EventHandler(this.button_TestEnd_Click);
-            // 
-            // button_TestStart
-            // 
-            this.button_TestStart.Location = new System.Drawing.Point(6, 24);
-            this.button_TestStart.Name = "button_TestStart";
-            this.button_TestStart.Size = new System.Drawing.Size(75, 23);
-            this.button_TestStart.TabIndex = 10;
-            this.button_TestStart.Text = "시작";
-            this.button_TestStart.UseVisualStyleBackColor = true;
-            this.button_TestStart.Click += new System.EventHandler(this.button_TestStart_Click);
             // 
             // groupBox_CustomHttpRequest
             // 
@@ -869,6 +815,241 @@
             this.linkLabel_GitHub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel_GitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_GitHub_LinkClicked);
             // 
+            // tabPage_test
+            // 
+            this.tabPage_test.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_test.Controls.Add(this.groupBox_TestResult);
+            this.tabPage_test.Controls.Add(this.groupBox_TestStartEnd);
+            this.tabPage_test.Controls.Add(this.groupBox_TestList);
+            this.tabPage_test.Location = new System.Drawing.Point(114, 4);
+            this.tabPage_test.Name = "tabPage_test";
+            this.tabPage_test.Size = new System.Drawing.Size(426, 263);
+            this.tabPage_test.TabIndex = 5;
+            this.tabPage_test.Text = "테스트";
+            // 
+            // groupBox_TestResult
+            // 
+            this.groupBox_TestResult.Controls.Add(this.label4);
+            this.groupBox_TestResult.Controls.Add(this.label3);
+            this.groupBox_TestResult.Controls.Add(this.textBox_OpcodeFilterList);
+            this.groupBox_TestResult.Controls.Add(this.label_OpcodeFilterPass);
+            this.groupBox_TestResult.Controls.Add(this.label2);
+            this.groupBox_TestResult.Controls.Add(this.label_OpcodeDataLength);
+            this.groupBox_TestResult.Controls.Add(this.label1);
+            this.groupBox_TestResult.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_TestResult.Location = new System.Drawing.Point(0, 154);
+            this.groupBox_TestResult.Name = "groupBox_TestResult";
+            this.groupBox_TestResult.Size = new System.Drawing.Size(426, 113);
+            this.groupBox_TestResult.TabIndex = 10;
+            this.groupBox_TestResult.TabStop = false;
+            this.groupBox_TestResult.Text = "Opcode Data 테스트 결과";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(7, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "(쉼표(,)로 구분)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(172, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "테스트 제외 opcode  목록: ";
+            // 
+            // textBox_OpcodeFilterList
+            // 
+            this.textBox_OpcodeFilterList.Location = new System.Drawing.Point(181, 62);
+            this.textBox_OpcodeFilterList.Name = "textBox_OpcodeFilterList";
+            this.textBox_OpcodeFilterList.Size = new System.Drawing.Size(239, 25);
+            this.textBox_OpcodeFilterList.TabIndex = 10;
+            // 
+            // label_OpcodeFilterPass
+            // 
+            this.label_OpcodeFilterPass.AutoSize = true;
+            this.label_OpcodeFilterPass.Location = new System.Drawing.Point(125, 38);
+            this.label_OpcodeFilterPass.Name = "label_OpcodeFilterPass";
+            this.label_OpcodeFilterPass.Size = new System.Drawing.Size(119, 17);
+            this.label_OpcodeFilterPass.TabIndex = 3;
+            this.label_OpcodeFilterPass.Text = "Opcode Filter 통과";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Opcode filter 통과: ";
+            // 
+            // label_OpcodeDataLength
+            // 
+            this.label_OpcodeDataLength.AutoSize = true;
+            this.label_OpcodeDataLength.Location = new System.Drawing.Point(125, 21);
+            this.label_OpcodeDataLength.Name = "label_OpcodeDataLength";
+            this.label_OpcodeDataLength.Size = new System.Drawing.Size(118, 17);
+            this.label_OpcodeDataLength.TabIndex = 1;
+            this.label_OpcodeDataLength.Text = "Opcode Data 길이";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Opcode Data 길이: ";
+            // 
+            // groupBox_TestStartEnd
+            // 
+            this.groupBox_TestStartEnd.Controls.Add(this.button_TestStart);
+            this.groupBox_TestStartEnd.Controls.Add(this.checkBox_TestLength);
+            this.groupBox_TestStartEnd.Controls.Add(this.button_TestEnd);
+            this.groupBox_TestStartEnd.Controls.Add(this.label1_TestLength);
+            this.groupBox_TestStartEnd.Controls.Add(this.label_TestState);
+            this.groupBox_TestStartEnd.Controls.Add(this.textBox_TestLength);
+            this.groupBox_TestStartEnd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_TestStartEnd.Location = new System.Drawing.Point(0, 99);
+            this.groupBox_TestStartEnd.Name = "groupBox_TestStartEnd";
+            this.groupBox_TestStartEnd.Size = new System.Drawing.Size(426, 55);
+            this.groupBox_TestStartEnd.TabIndex = 9;
+            this.groupBox_TestStartEnd.TabStop = false;
+            this.groupBox_TestStartEnd.Text = "테스트 시작/종료";
+            // 
+            // button_TestStart
+            // 
+            this.button_TestStart.Location = new System.Drawing.Point(6, 24);
+            this.button_TestStart.Name = "button_TestStart";
+            this.button_TestStart.Size = new System.Drawing.Size(75, 23);
+            this.button_TestStart.TabIndex = 6;
+            this.button_TestStart.Text = "시작";
+            this.button_TestStart.UseVisualStyleBackColor = true;
+            this.button_TestStart.Click += new System.EventHandler(this.button_TestStart_Click);
+            // 
+            // checkBox_TestLength
+            // 
+            this.checkBox_TestLength.AutoSize = true;
+            this.checkBox_TestLength.Location = new System.Drawing.Point(181, 26);
+            this.checkBox_TestLength.Name = "checkBox_TestLength";
+            this.checkBox_TestLength.Size = new System.Drawing.Size(84, 21);
+            this.checkBox_TestLength.TabIndex = 8;
+            this.checkBox_TestLength.Text = "시간 제한";
+            this.checkBox_TestLength.UseVisualStyleBackColor = true;
+            this.checkBox_TestLength.CheckedChanged += new System.EventHandler(this.checkBox_TestLength_CheckedChanged);
+            // 
+            // button_TestEnd
+            // 
+            this.button_TestEnd.Location = new System.Drawing.Point(266, 24);
+            this.button_TestEnd.Name = "button_TestEnd";
+            this.button_TestEnd.Size = new System.Drawing.Size(75, 23);
+            this.button_TestEnd.TabIndex = 9;
+            this.button_TestEnd.Text = "종료";
+            this.button_TestEnd.UseVisualStyleBackColor = true;
+            this.button_TestEnd.Click += new System.EventHandler(this.button_TestEnd_Click);
+            // 
+            // label1_TestLength
+            // 
+            this.label1_TestLength.AutoSize = true;
+            this.label1_TestLength.Location = new System.Drawing.Point(161, 27);
+            this.label1_TestLength.Name = "label1_TestLength";
+            this.label1_TestLength.Size = new System.Drawing.Size(21, 17);
+            this.label1_TestLength.TabIndex = 13;
+            this.label1_TestLength.Text = "초";
+            // 
+            // label_TestState
+            // 
+            this.label_TestState.AutoSize = true;
+            this.label_TestState.Location = new System.Drawing.Point(343, 27);
+            this.label_TestState.Name = "label_TestState";
+            this.label_TestState.Size = new System.Drawing.Size(78, 17);
+            this.label_TestState.TabIndex = 15;
+            this.label_TestState.Text = "테스트 상태";
+            // 
+            // textBox_TestLength
+            // 
+            this.textBox_TestLength.Enabled = false;
+            this.textBox_TestLength.Location = new System.Drawing.Point(84, 24);
+            this.textBox_TestLength.Name = "textBox_TestLength";
+            this.textBox_TestLength.Size = new System.Drawing.Size(77, 25);
+            this.textBox_TestLength.TabIndex = 7;
+            // 
+            // groupBox_TestList
+            // 
+            this.groupBox_TestList.Controls.Add(this.textBox_OpcodeFilter);
+            this.groupBox_TestList.Controls.Add(this.checkBox_OpcodeFilter);
+            this.groupBox_TestList.Controls.Add(this.textBox_Opcode);
+            this.groupBox_TestList.Controls.Add(this.checkBox_OpcodeData);
+            this.groupBox_TestList.Controls.Add(this.label_Opcode);
+            this.groupBox_TestList.Controls.Add(this.checkBox_Opcode);
+            this.groupBox_TestList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_TestList.Location = new System.Drawing.Point(0, 0);
+            this.groupBox_TestList.Name = "groupBox_TestList";
+            this.groupBox_TestList.Size = new System.Drawing.Size(426, 99);
+            this.groupBox_TestList.TabIndex = 7;
+            this.groupBox_TestList.TabStop = false;
+            this.groupBox_TestList.Text = "테스트 목록";
+            // 
+            // textBox_OpcodeFilter
+            // 
+            this.textBox_OpcodeFilter.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox_OpcodeFilter.Location = new System.Drawing.Point(196, 46);
+            this.textBox_OpcodeFilter.Name = "textBox_OpcodeFilter";
+            this.textBox_OpcodeFilter.Size = new System.Drawing.Size(100, 23);
+            this.textBox_OpcodeFilter.TabIndex = 3;
+            // 
+            // checkBox_OpcodeFilter
+            // 
+            this.checkBox_OpcodeFilter.AutoSize = true;
+            this.checkBox_OpcodeFilter.Location = new System.Drawing.Point(9, 47);
+            this.checkBox_OpcodeFilter.Name = "checkBox_OpcodeFilter";
+            this.checkBox_OpcodeFilter.Size = new System.Drawing.Size(181, 21);
+            this.checkBox_OpcodeFilter.TabIndex = 2;
+            this.checkBox_OpcodeFilter.Text = "opcode 가능성 체크(필터)";
+            this.checkBox_OpcodeFilter.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Opcode
+            // 
+            this.textBox_Opcode.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox_Opcode.Location = new System.Drawing.Point(209, 70);
+            this.textBox_Opcode.Name = "textBox_Opcode";
+            this.textBox_Opcode.Size = new System.Drawing.Size(100, 23);
+            this.textBox_Opcode.TabIndex = 5;
+            // 
+            // checkBox_OpcodeData
+            // 
+            this.checkBox_OpcodeData.AutoSize = true;
+            this.checkBox_OpcodeData.Location = new System.Drawing.Point(9, 68);
+            this.checkBox_OpcodeData.Name = "checkBox_OpcodeData";
+            this.checkBox_OpcodeData.Size = new System.Drawing.Size(135, 21);
+            this.checkBox_OpcodeData.TabIndex = 4;
+            this.checkBox_OpcodeData.Text = "opcode Data 확인";
+            this.checkBox_OpcodeData.UseVisualStyleBackColor = true;
+            // 
+            // label_Opcode
+            // 
+            this.label_Opcode.AutoSize = true;
+            this.label_Opcode.Location = new System.Drawing.Point(150, 71);
+            this.label_Opcode.Name = "label_Opcode";
+            this.label_Opcode.Size = new System.Drawing.Size(53, 17);
+            this.label_Opcode.TabIndex = 1;
+            this.label_Opcode.Text = "opcode";
+            // 
+            // checkBox_Opcode
+            // 
+            this.checkBox_Opcode.AutoSize = true;
+            this.checkBox_Opcode.Location = new System.Drawing.Point(9, 26);
+            this.checkBox_Opcode.Name = "checkBox_Opcode";
+            this.checkBox_Opcode.Size = new System.Drawing.Size(134, 21);
+            this.checkBox_Opcode.TabIndex = 1;
+            this.checkBox_Opcode.Text = "opcode 목록 확인";
+            this.checkBox_Opcode.UseVisualStyleBackColor = true;
+            // 
             // label_AboutTitle
             // 
             this.label_AboutTitle.BackColor = System.Drawing.Color.Silver;
@@ -926,8 +1107,6 @@
             this.groupBox_DefaultSet.ResumeLayout(false);
             this.groupBox_DefaultSet.PerformLayout();
             this.tabPage_Advanced.ResumeLayout(false);
-            this.groupBox_Test.ResumeLayout(false);
-            this.groupBox_Test.PerformLayout();
             this.groupBox_CustomHttpRequest.ResumeLayout(false);
             this.groupBox_CustomHttpRequest.PerformLayout();
             this.tabPage_FATE.ResumeLayout(false);
@@ -940,6 +1119,13 @@
             this.menuStrip_LogTab.ResumeLayout(false);
             this.menuStrip_LogTab.PerformLayout();
             this.tabPage_Info.ResumeLayout(false);
+            this.tabPage_test.ResumeLayout(false);
+            this.groupBox_TestResult.ResumeLayout(false);
+            this.groupBox_TestResult.PerformLayout();
+            this.groupBox_TestStartEnd.ResumeLayout(false);
+            this.groupBox_TestStartEnd.PerformLayout();
+            this.groupBox_TestList.ResumeLayout(false);
+            this.groupBox_TestList.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1013,14 +1199,30 @@
         private System.Windows.Forms.TextBox textBox_CustomHttpUrl;
         private System.Windows.Forms.Label label_HttpRequestUrl;
         private System.Windows.Forms.Label label_HttpRequestReadme;
-        private System.Windows.Forms.GroupBox groupBox_Test;
-        private System.Windows.Forms.Button button_TestEnd;
-        private System.Windows.Forms.Button button_TestStart;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TabPage tabPage_test;
+        private System.Windows.Forms.GroupBox groupBox_TestList;
+        private System.Windows.Forms.Label label_TestState;
+        private System.Windows.Forms.CheckBox checkBox_TestLength;
         private System.Windows.Forms.Label label1_TestLength;
         private System.Windows.Forms.TextBox textBox_TestLength;
-        private System.Windows.Forms.CheckBox checkBox_TestLength;
-        private System.Windows.Forms.Label label_TestState;
+        private System.Windows.Forms.Button button_TestEnd;
+        private System.Windows.Forms.Button button_TestStart;
+        private System.Windows.Forms.Label label_Opcode;
+        private System.Windows.Forms.GroupBox groupBox_TestStartEnd;
+        private System.Windows.Forms.CheckBox checkBox_OpcodeData;
+        private System.Windows.Forms.CheckBox checkBox_Opcode;
+        private System.Windows.Forms.GroupBox groupBox_TestResult;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox textBox_Opcode;
+        public System.Windows.Forms.Label label_OpcodeDataLength;
+        public System.Windows.Forms.CheckBox checkBox_OpcodeFilter;
+        public System.Windows.Forms.TextBox textBox_OpcodeFilter;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label_OpcodeFilterPass;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox textBox_OpcodeFilterList;
     }
 }
 

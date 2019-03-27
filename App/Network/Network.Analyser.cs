@@ -14,7 +14,8 @@ namespace App
         internal SoundPlayer notificationPlayer;
         private SoundPlayer fatePlayer;
         private System.IO.Stream str = Properties.Resources.FFXIV_FATE_Start;
-        public List<int> NetworkCodes = new List<int>();
+        public List<int> networkCodes = new List<int>();
+        public List<byte> opcodeData = new List<byte>();
 
         private void AnalyseFFXIVPacket(byte[] payload)
         {
@@ -150,11 +151,54 @@ namespace App
                     return;
 #endif
 
-                if (mainForm.testState)
-                    if(!NetworkCodes.Exists(x => x == opcode))
-                        NetworkCodes.Add(opcode);
-
                 var data = message.Skip(32).ToArray();
+
+
+                // skip할 opcode 체크하는 부분
+                string[] filterList = mainForm.textBox_OpcodeFilterList.Text.Split(',');
+                bool skip = false;
+                for (int i = 0; i < filterList.Length; i++)
+                    if (Int32.Parse(filterList[i]) == opcode)
+                        skip = true;
+
+
+                if (!skip)
+                {
+                    // opcode 리스트 뽑아내는 부분
+                    if (mainForm.codeListTestState)
+                        if (!networkCodes.Exists(x => x == opcode))
+                            networkCodes.Add(opcode);
+
+                    // opcode filter 테스트 통과 체크 부분
+                    if (mainForm.checkBox_OpcodeFilter.Checked)
+                    {
+                        bool exist = false;
+                        for (int i = 0; i < data.Length; i++)
+                            if (data[i].ToString() == mainForm.textBox_OpcodeFilter.Text)
+                                exist = true;
+                        if (exist)
+                        {
+                            Log.I("opcode - " + opcode + " 가능성");
+                            mainForm.label_OpcodeFilterPass.Text = opcode.ToString();
+                        }
+                    }
+                    
+                    // opcode Data 정보 뽑아내는 부분
+                    if (mainForm.opcodeDataTestState)
+                        if (opcode == Int32.Parse(mainForm.textBox_Opcode.Text))
+                        {
+                            opcodeData.RemoveRange(0, opcodeData.Count);
+                            mainForm.label_OpcodeDataLength.Text = data.Length.ToString();
+                            Log.I("opcode Data 시작");
+                            for (int i = 0; i < data.Length; i++)
+                            {
+                                opcodeData.Add(data[i]);
+                                Log.I(i + "번째: " + data[i].ToString());
+                            }
+                            Log.I("opcode Data 끝");
+                        }
+                }
+
 
                 if (opcode == 0x022F)
                 {
