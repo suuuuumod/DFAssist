@@ -11,6 +11,36 @@ namespace App
 {
     internal static class WebApi
     {
+        internal static void Request(string service, string type, string name)
+        {
+            Task.Factory.StartNew(() =>
+            {
+                var account = "";
+                if(service == "twitter")
+                    account = Settings.TwitterAccount;
+                else if (service == "telegram")
+                    account = Settings.TelegramChatId;
+                else if (service == "discord")
+                    account = Settings.DiscordAccount;
+                if (account == "") return;
+                var url = $"{Global.API_ENDPOINT}?service={service}&user={account}&lang={Settings.Language}&type={type}&name={HttpUtility.UrlEncode(name)}&hash={GetMD5Hash(name)}";
+
+                var resp = Request(url);
+                if (resp == null)
+                {
+                    Log.E($"l-{service}-failed-request");
+                }
+                else if (resp == "0")
+                {
+                    Log.S($"l-{service}-success");
+                }
+                else
+                {
+                    Log.E($"l-{service}-failed-general", resp);
+                }
+            });
+        }
+
         internal static void customHttpRequest(string status, string name)
         {
             Task.Factory.StartNew(() =>

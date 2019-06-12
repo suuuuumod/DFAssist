@@ -10,7 +10,7 @@ Do other things while in waiting list! DFAssist will give you match notification
 
 ## Information
 
-- Latest Version ```v20190323.2``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- Latest Version ```v20190603.1``` ([Download](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - Target Version ```Microsoft .NET Framework 4.0``` ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=17851))
 - Game Version ```Final Fantasy XIV, Version 4.5```
 
@@ -29,6 +29,8 @@ Do other things while in waiting list! DFAssist will give you match notification
   - Preview exact matched duty when using duty roulette. (Needs Setting)
   - Notifies when checked F.A.T.E occurs. (Character Need to be in FATE area)
   - Custom notification sound support.
+- Alarm via Telegram Message or Discord Message with Mention.
+  - To receive discord message, you should be in the [DFAssist Discord Server](https://discord.gg/RqesxtS).
 - Enable to POST request to wherever user wants when Duty Matched and FATE Occured. (Additional Update is scheduled.)
 
 ## Problem Solving
@@ -66,8 +68,9 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 
 ### Application UI
 
-![Application UI 1](https://i.imgur.com/sc7kCVO.png)  
-![Application UI 2](https://i.imgur.com/NwuAdyH.jpg)
+![Application UI 1](https://i.imgur.com/2XxRkp5.png)  
+![Application UI 2](https://i.imgur.com/xdBmYgc.png)  
+![Application UI 3](https://i.imgur.com/SnvH7Zf.png)
 
 ### Tray Icon
 
@@ -78,7 +81,7 @@ Logs on application window helps a lot with problem solving. Attaching logs is h
 ```
   All company, product, system names are registered or unregistered trademarks of their respective owners.
 
-  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
+  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by ACTOZ SOFT.
 ```
 
 All codes, resources, data, not copyrighted by company above, are

@@ -1,6 +1,6 @@
 ﻿{
   // Version
-  "version": "20190218.1",
+  "version": "20190607.1",
 
   // Duty
   "instances": {
@@ -1821,6 +1821,12 @@
       "healer": "0",
       "dps": "0"
     },
+    "599": {
+      "name": "Hidden Gorge",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
 
 
     // Deep Dungeons
@@ -2037,6 +2043,42 @@
     // Other things...
     "437": {
       "name": "Triple Triad",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "600": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "601": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "602": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "603": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "605": {
+      "name": "Leap of Faith",
+      "tank": "0",
+      "healer": "0",
+      "dps": "0"
+    },
+    "608": {
+      "name": "Leap of Faith",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -3299,6 +3341,12 @@
         "1380": "Counter-void Training: Premium Cuts",
         "1383": "Joint Training: The Quick and the Undead",
         "1385": "Counter-void Training: A Void at All Costs"
+      }
+    },
+    "1005": {
+      "name": "Event",
+      "fates": {
+        "1409": "Like Clockwork"
       }
     }
   }

@@ -18,6 +18,12 @@ namespace App
         public static bool FateSound { get; set; } = false;
         public static bool CustomSound { get; set; } = false;
         public static string CustomSoundPath { get; set; } = "";
+        public static bool TwitterEnabled { get; set; } = false;
+        public static string TwitterAccount { get; set; } = "";
+        public static bool TelegramEnabled { get; set; } = false;
+        public static string TelegramChatId { get; set; } = "";
+        public static bool DiscordEnabled { get; set; } = false;
+        public static string DiscordAccount { get; set; } = "";
         public static bool useVPN { get; set; } = false;
         public static bool CheatRoulette { get; set; } = false;
         public static bool Updated { get; set; } = false;
@@ -52,6 +58,12 @@ namespace App
                 FateSound = iniFile.ReadValue("notification", "fatesound") == "1";
                 CustomSound = iniFile.ReadValue("notification", "customsound") == "1";
                 CustomSoundPath = iniFile.ReadValue("notification", "customsoundpath") ?? "";
+                TwitterEnabled = iniFile.ReadValue("notification", "twitter") == "1";
+                TwitterAccount = iniFile.ReadValue("notification", "twitteraccount") ?? "";
+                TelegramEnabled = iniFile.ReadValue("notification", "telegram") == "1";
+                TelegramChatId = iniFile.ReadValue("notification", "telegramchatid") ?? "";
+                DiscordEnabled = iniFile.ReadValue("notification", "discord") == "1";
+                DiscordAccount = iniFile.ReadValue("notification", "discordaccount") ?? "";
                 useVPN = iniFile.ReadValue("misc", "useVPN") == "1";
                 CheatRoulette = iniFile.ReadValue("misc", "cheatroulette") == "1";
                 Language = iniFile.ReadValue("misc", "language") ?? "ko-kr";
@@ -79,6 +91,12 @@ namespace App
             iniFile.WriteValue("notification", "fatesound", FateSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsound", CustomSound ? "1" : "0");
             iniFile.WriteValue("notification", "customsoundpath", CustomSoundPath);
+            iniFile.WriteValue("notification", "twitter", TwitterEnabled ? "1" : "0");
+            iniFile.WriteValue("notification", "twitteraccount", TwitterAccount);
+            iniFile.WriteValue("notification", "telegram", TelegramEnabled ? "1" : "0");
+            iniFile.WriteValue("notification", "telegramChatId", TelegramChatId);
+            iniFile.WriteValue("notification", "discord", DiscordEnabled ? "1" : "0");
+            iniFile.WriteValue("notification", "discordaccount", DiscordAccount);
             iniFile.WriteValue("misc", "useVPN", useVPN ? "1" : "0");
             iniFile.WriteValue("misc", "cheatroulette", CheatRoulette ? "1" : "0");
             iniFile.WriteValue("misc", "language", Language);

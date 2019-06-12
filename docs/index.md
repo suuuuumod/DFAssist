@@ -10,7 +10,7 @@ title: {{ site.name }}
 
 ## 정보
 
-- 최신 버전 ```v20190323.2``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
+- 최신 버전 ```v20190603.1``` ([다운로드](https://github.com/jaehyuk-lee/DFAssist/releases/latest))
 - 타겟 버전 ```Microsoft .NET Framework 4.0``` ([다운로드](https://www.microsoft.com/ko-kr/download/details.aspx?id=17851))
 - 게임 버전 ```파이널 판타지 14 한국판, 버전 4.4```또는 ```글로벌판, 버전 4.5```
 
@@ -29,6 +29,8 @@ title: {{ site.name }}
   - 무작위 임무가 매칭됐을 시 매칭된 임무가 어떤 임무인지 입장 전 확인 가능 (설정 필요)
   - 미리 설정한 돌발 임무가 현재 위치한 맵에 발생했을 경우 알림 가능 (이벤트 돌발, 고대무기 돌발 등)
   - 알림음 사용자 지정 가능
+- 텔레그램이나 디스코드로 알림 기능
+  - 디스코드 알림은 [DFAssist 디스코드 서버](https://discord.gg/RqesxtS)에 참여한 상태에만 알림 수신 가능
 - 사용자가 원하는 서버로 임무 매칭 완료 또는 돌발임무 발생 POST 요청 가능 (추가적인 업데이트가 계획되어 있습니다.)
 
 ## 문제 해결
@@ -73,8 +75,9 @@ title: {{ site.name }}
 
 ### 프로그램 UI
 
-![프로그램 UI 1](https://i.imgur.com/4pPVjxm.png)  
-![프로그램 UI 2](https://i.imgur.com/D6opRwI.png)
+![프로그램 UI 1](https://i.imgur.com/xsiqN0R.png)  
+![프로그램 UI 2](https://i.imgur.com/bkBCc2q.png)  
+![프로그램 UI 3](https://i.imgur.com/TC9wXBO.png)
 
 ### 알림창 아이콘
 
@@ -85,7 +88,7 @@ title: {{ site.name }}
 ```
   기재되어있는 회사명 · 제품명 · 시스템 이름은 해당 소유자의 상표 또는 등록 상표입니다.
 
-  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by EYEDENTITY ENTERTAINMENT.
+  (C) 2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved. Korea Published by ACTOZ SOFT.
 ```
 
 상단 회사에 저작권이 없는 코드, 리소스, 데이터 등은 모두

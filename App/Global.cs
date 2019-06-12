@@ -10,6 +10,10 @@
 
         public const string GITHUB_REPO = @"Jaehyuk-Lee/DFAssist";
 
+        public const string API_ENDPOINT = @"https://dfassist-api-node.herokuapp.com/";
+        public const string DISCORD_INVITE = @"https://discord.gg/RqesxtS";
+        public const string TELEGRAM_BOT = @"https://telegram.me/DFAssist_Notify_Bot";
+
         public const int BLINK_COUNT = 100;
         public const int BLINK_INTERVAL = 200;
 

@@ -13,6 +13,9 @@
   "notification-fate-occured": "< {0} > Occured!",
 
 
+  "fate-occured": "< {0} > FATE spawned!",
+  "queue-matched": "< {0} > Duty matched!",
+
 
   "fate-preset-animus-SkyfireI": "Book of Skyfire I",
   "fate-preset-animus-SkyfireII": "Book of Skyfire II",
@@ -26,7 +29,7 @@
   "fate-preset-Ixion": "Ixion",
   "fate-preset-Tamamo": "Tamamo",
 
-
+  
   "ui-notifymenustrip-open": "Open",
   "ui-notifymenustrip-close": "Exit",
 
@@ -35,19 +38,11 @@
   "ui-topsetting-reset": "Reset",
 
   "ui-tabcontrol-settings": "Setting",
+  "ui-tabcontrol-3rdparty": "3rd-party",
   "ui-tabcontrol-advanced": "Advanced",
   "ui-tabcontrol-fate": "FATE",
   "ui-tabcontrol-logs": "Logs",
   "ui-tabcontrol-info": "Info",
-
-  "ui-updatenote-title": "Update Note",
-  "ui-updatenote-text": "1. Added FATE notification sound option. (Uses FFXIV FATE Start Sound)\n2. Added Customize notification sound feature. (only *.wav file accepted.)\n3. Tweet Notify Service completely removed. (Functioning Server went down)\n4. Problem using with some VPN services resolved.\n5. Send POST Request wherever you want.",
-  
-  "ui-advanced-http": "Custom HTTP Request",
-  "ui-advanced-http-enable": "Enable",
-  "ui-advanced-http-duty-matched": "Send when Duty Matched",
-  "ui-advanced-http-fate-occured": "Send when Fate Occured",
-  "ui-advanced-http-readme": "When enabled, DFAssistwill send a POST HTTP Request with \n\"status\" and \"info\" to the specified URL.\n\"status\"is sent with a string called \"duty-match\" or \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.\n\nThis feature is scheduled to be updated more.",
 
   "ui-settings-title": "Basic setting",
   "ui-settings-overlay-use": "Use overlay",
@@ -64,6 +59,23 @@
   "ui-settings-getfilewav": "WAV files (*.wav)|*.wav",
   "ui-notification-customsound-selectfile": "Select sound file first",
 
+  "ui-3rdparty-twitter-title": "Twitter Alarm",
+  "ui-3rdparty-twitter-activate": "Enable",
+  "ui-3rdparty-twitter-about": "When a queue pops or FATE occurs, \nsend a Tweet with a mention to this Twitter account.\nEnter the Twitter Account except the preceding symbol @.",
+  "ui-3rdparty-telegram-title": "Telegram Alarm",
+  "ui-3rdparty-telegram-activate": "Enable",
+  "ui-3rdparty-telegram-about": "When a queue pops or FATE occurs, send a message to this Telegram chat room.\nYou can get your Chat ID if you send any message to DFAssist Telegram Bot.",
+  "ui-3rdparty-discord-title": "Discord Alarm",
+  "ui-3rdparty-discord-activate": "Enable",
+  "ui-3rdparty-discord-numberonly-alert": "Discord ID is only number accepted.",
+  "ui-3rdparty-discord-about": "Notify via Discord message with a mention to this Discord ID.\nEnter your over 15-digit number Discord ID.\n\nTo check Discord ID: Enter !id command on #get-discord-id channel in DFAssist Discord Server. DFAssist Bot will reply your Discord ID.\nAlso, you should be in the DFAssist Discord Server to get notification.",
+
+  "ui-advanced-http": "Custom HTTP Request",
+  "ui-advanced-http-enable": "Enable",
+  "ui-advanced-http-duty-matched": "Send when Duty Matched",
+  "ui-advanced-http-fate-occured": "Send when Fate Occured",
+  "ui-advanced-http-readme": "When enabled, DFAssistwill send a POST HTTP Request with \n\"status\" and \"info\" to the specified URL.\n\"status\"is sent with a string called \"duty-match\" or \"fate-occured\".\n\"info\" is sent with the Matched Duty Name or Occured FATE Name.\n\nThis feature is scheduled to be updated more.",
+
   "ui-fate-selectall": "Select all",
   "ui-fate-unselectall": "Unselect all",
   "ui-fate-preset": "Preset",
@@ -73,7 +85,7 @@
   "ui-logs-copy": "Copy Logs",
   "ui-logs-clear": "Clear",
 
-  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n[Support] : fpdhs698\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by EYEDENTITY Entertainment.",
+  "ui-info-about": "[Contributor]\n유채색\nLaiglinne\nHibiyasleep\nAlex00728\n[Support] : fpdhs698\n[Copyright]\nAll company, product, system names are\n registered or unregistered trademarks of their respective owners.\n(C)2010 - 2019 SQUARE ENIX CO., LTD All Rights Reserved.\nKorea Published by ACTOZ SOFT.",
 
   "ui-msgbox-title-info": "DFA Notice",
   "ui-msgbox-title-warning": "DFA warning",
@@ -115,6 +127,16 @@
   "l-process-finding": "P: Finding FFXIV process...",
   "l-process-found-nothing": "P: Could not find FFXIV process.",
   "l-process-found-multiple": "P: 2 or more FFXIV processes are running.",
+
+  "l-twitter-failed-request": "R: Error occured while requesting tweet",
+  "l-twitter-failed-general": "R: Failed to send tweet: {0}",
+  "l-twitter-success": "R: Tweet sent!",
+  "l-telegram-failed-request": "R: Error occured while requesting telegram message",
+  "l-telegram-failed-general": "R: Failed to send telegram message: {0}",
+  "l-telegram-success": "R: Telegram message sent!",
+  "l-discord-failed-request": "R: Error occured while requesting discord message",
+  "l-discord-failed-general": "R: Failed to send discord message: {0}",
+  "l-discord-success": "R: Discord message sent!",
 
   "l-web-request-failed": "W: Error requesting web service",
 

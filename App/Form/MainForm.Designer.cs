@@ -43,8 +43,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl = new App.TabControlBlack();
             this.tabPage_Settings = new System.Windows.Forms.TabPage();
-            this.groupBox_UpdateNote = new System.Windows.Forms.GroupBox();
-            this.label_UpdateNote = new System.Windows.Forms.Label();
             this.groupBox_DefaultSet = new System.Windows.Forms.GroupBox();
             this.checkBox_useVPN = new System.Windows.Forms.CheckBox();
             this.label_CustomSoundFileName = new System.Windows.Forms.Label();
@@ -56,6 +54,19 @@
             this.checkBox_FlashWindow = new System.Windows.Forms.CheckBox();
             this.checkBox_StartupShow = new System.Windows.Forms.CheckBox();
             this.checkBox_Overlay = new System.Windows.Forms.CheckBox();
+            this.tabPage_3rdParty = new System.Windows.Forms.TabPage();
+            this.linkLabel_Telegram = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_DiscordServer = new System.Windows.Forms.LinkLabel();
+            this.groupBox_DiscordSet = new System.Windows.Forms.GroupBox();
+            this.textBox_Discord = new System.Windows.Forms.TextBox();
+            this.label_DiscordAt = new App.LocalizableLabel();
+            this.label_DiscordAbout = new App.LocalizableLabel();
+            this.checkBox_Discord = new System.Windows.Forms.CheckBox();
+            this.groupBox_TelegramSet = new System.Windows.Forms.GroupBox();
+            this.textBox_Telegram = new System.Windows.Forms.TextBox();
+            this.label_Telegram_ChatId = new App.LocalizableLabel();
+            this.label_TelegramAbout = new App.LocalizableLabel();
+            this.checkBox_Telegram = new System.Windows.Forms.CheckBox();
             this.tabPage_Advanced = new System.Windows.Forms.TabPage();
             this.groupBox_CustomHttpRequest = new System.Windows.Forms.GroupBox();
             this.label_HttpRequestReadme = new System.Windows.Forms.Label();
@@ -127,8 +138,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPage_Settings.SuspendLayout();
-            this.groupBox_UpdateNote.SuspendLayout();
             this.groupBox_DefaultSet.SuspendLayout();
+            this.tabPage_3rdParty.SuspendLayout();
+            this.groupBox_DiscordSet.SuspendLayout();
+            this.groupBox_TelegramSet.SuspendLayout();
             this.tabPage_Advanced.SuspendLayout();
             this.groupBox_CustomHttpRequest.SuspendLayout();
             this.tabPage_FATE.SuspendLayout();
@@ -249,6 +262,7 @@
             // 
             this.tabControl.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl.Controls.Add(this.tabPage_Settings);
+            this.tabControl.Controls.Add(this.tabPage_3rdParty);
             this.tabControl.Controls.Add(this.tabPage_Advanced);
             this.tabControl.Controls.Add(this.tabPage_FATE);
             this.tabControl.Controls.Add(this.tabPage_Log);
@@ -267,34 +281,12 @@
             // tabPage_Settings
             // 
             this.tabPage_Settings.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Settings.Controls.Add(this.groupBox_UpdateNote);
             this.tabPage_Settings.Controls.Add(this.groupBox_DefaultSet);
             this.tabPage_Settings.Location = new System.Drawing.Point(114, 4);
             this.tabPage_Settings.Name = "tabPage_Settings";
             this.tabPage_Settings.Size = new System.Drawing.Size(426, 263);
             this.tabPage_Settings.TabIndex = 1;
             this.tabPage_Settings.Text = "설정";
-            // 
-            // groupBox_UpdateNote
-            // 
-            this.groupBox_UpdateNote.Controls.Add(this.label_UpdateNote);
-            this.groupBox_UpdateNote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_UpdateNote.Location = new System.Drawing.Point(0, 187);
-            this.groupBox_UpdateNote.Name = "groupBox_UpdateNote";
-            this.groupBox_UpdateNote.Size = new System.Drawing.Size(426, 86);
-            this.groupBox_UpdateNote.TabIndex = 0;
-            this.groupBox_UpdateNote.TabStop = false;
-            this.groupBox_UpdateNote.Text = "업데이트 노트";
-            // 
-            // label_UpdateNote
-            // 
-            this.label_UpdateNote.AutoSize = true;
-            this.label_UpdateNote.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_UpdateNote.Location = new System.Drawing.Point(6, 19);
-            this.label_UpdateNote.Name = "label_UpdateNote";
-            this.label_UpdateNote.Size = new System.Drawing.Size(102, 26);
-            this.label_UpdateNote.TabIndex = 10;
-            this.label_UpdateNote.Text = "최대 5줄 작성 가능\r\n(5 line limit)";
             // 
             // groupBox_DefaultSet
             // 
@@ -435,6 +427,155 @@
             this.toolTip.SetToolTip(this.checkBox_Overlay, "오버레이 UI의 좌측 막대를 이용해 드래그 할 수 있습니다.");
             this.checkBox_Overlay.UseVisualStyleBackColor = true;
             this.checkBox_Overlay.CheckedChanged += new System.EventHandler(this.checkBox_Overlay_CheckedChanged);
+            // 
+            // tabPage_3rdParty
+            // 
+            this.tabPage_3rdParty.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_3rdParty.Controls.Add(this.linkLabel_Telegram);
+            this.tabPage_3rdParty.Controls.Add(this.linkLabel_DiscordServer);
+            this.tabPage_3rdParty.Controls.Add(this.groupBox_DiscordSet);
+            this.tabPage_3rdParty.Controls.Add(this.groupBox_TelegramSet);
+            this.tabPage_3rdParty.Location = new System.Drawing.Point(114, 4);
+            this.tabPage_3rdParty.Name = "tabPage_3rdParty";
+            this.tabPage_3rdParty.Size = new System.Drawing.Size(426, 263);
+            this.tabPage_3rdParty.TabIndex = 5;
+            this.tabPage_3rdParty.Text = "외부 알림";
+            // 
+            // linkLabel_Telegram
+            // 
+            this.linkLabel_Telegram.Location = new System.Drawing.Point(-2, 243);
+            this.linkLabel_Telegram.Name = "linkLabel_Telegram";
+            this.linkLabel_Telegram.Size = new System.Drawing.Size(213, 20);
+            this.linkLabel_Telegram.TabIndex = 6;
+            this.linkLabel_Telegram.TabStop = true;
+            this.linkLabel_Telegram.Text = "DFAssist Telegram Bot";
+            this.linkLabel_Telegram.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel_Telegram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Telegram_LinkClicked);
+            // 
+            // linkLabel_DiscordServer
+            // 
+            this.linkLabel_DiscordServer.Location = new System.Drawing.Point(210, 243);
+            this.linkLabel_DiscordServer.Name = "linkLabel_DiscordServer";
+            this.linkLabel_DiscordServer.Size = new System.Drawing.Size(216, 20);
+            this.linkLabel_DiscordServer.TabIndex = 4;
+            this.linkLabel_DiscordServer.TabStop = true;
+            this.linkLabel_DiscordServer.Text = "DFAssist Discord Server";
+            this.linkLabel_DiscordServer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel_DiscordServer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_DiscordServer_LinkClicked);
+            // 
+            // groupBox_DiscordSet
+            // 
+            this.groupBox_DiscordSet.Controls.Add(this.textBox_Discord);
+            this.groupBox_DiscordSet.Controls.Add(this.label_DiscordAt);
+            this.groupBox_DiscordSet.Controls.Add(this.label_DiscordAbout);
+            this.groupBox_DiscordSet.Controls.Add(this.checkBox_Discord);
+            this.groupBox_DiscordSet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_DiscordSet.Location = new System.Drawing.Point(0, 102);
+            this.groupBox_DiscordSet.Name = "groupBox_DiscordSet";
+            this.groupBox_DiscordSet.Size = new System.Drawing.Size(426, 140);
+            this.groupBox_DiscordSet.TabIndex = 2;
+            this.groupBox_DiscordSet.TabStop = false;
+            this.groupBox_DiscordSet.Text = "디스코드 알림";
+            // 
+            // textBox_Discord
+            // 
+            this.textBox_Discord.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_Discord.Enabled = false;
+            this.textBox_Discord.ForeColor = System.Drawing.Color.Black;
+            this.textBox_Discord.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.textBox_Discord.Location = new System.Drawing.Point(32, 18);
+            this.textBox_Discord.MaxLength = 18;
+            this.textBox_Discord.Name = "textBox_Discord";
+            this.textBox_Discord.Size = new System.Drawing.Size(156, 25);
+            this.textBox_Discord.TabIndex = 11;
+            this.textBox_Discord.TextChanged += new System.EventHandler(this.textBox_Discord_TextChanged);
+            this.textBox_Discord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Discord_KeyPress);
+            // 
+            // label_DiscordAt
+            // 
+            this.label_DiscordAt.AutoSize = true;
+            this.label_DiscordAt.Location = new System.Drawing.Point(10, 21);
+            this.label_DiscordAt.Name = "label_DiscordAt";
+            this.label_DiscordAt.Size = new System.Drawing.Size(24, 17);
+            this.label_DiscordAt.TabIndex = 12;
+            this.label_DiscordAt.Text = "ID:";
+            // 
+            // label_DiscordAbout
+            // 
+            this.label_DiscordAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.label_DiscordAbout.Location = new System.Drawing.Point(10, 45);
+            this.label_DiscordAbout.Name = "label_DiscordAbout";
+            this.label_DiscordAbout.Size = new System.Drawing.Size(415, 92);
+            this.label_DiscordAbout.TabIndex = 13;
+            this.label_DiscordAbout.Text = "입력된 디스코드 계정으로도 멘션을 통해 알림을 보냅니다.\r\n디스코드 ID는 15자리 이상의 숫자입니다.\r\n\r\n디스코드 ID는 DFAssist 디스" +
+    "코드 서버에서 #get-discord-id 채널에 !id 를 입력하면 확인할 수 있습니다.\r\n또한, DFAssist 디스코드 서버에 참여한 상태" +
+    "여야만 알림을 보낼 수 있습니다.";
+            // 
+            // checkBox_Discord
+            // 
+            this.checkBox_Discord.AutoSize = true;
+            this.checkBox_Discord.Location = new System.Drawing.Point(194, 20);
+            this.checkBox_Discord.Name = "checkBox_Discord";
+            this.checkBox_Discord.Size = new System.Drawing.Size(66, 21);
+            this.checkBox_Discord.TabIndex = 14;
+            this.checkBox_Discord.Text = "활성화";
+            this.checkBox_Discord.UseVisualStyleBackColor = true;
+            this.checkBox_Discord.CheckedChanged += new System.EventHandler(this.checkBox_Discord_CheckedChanged);
+            // 
+            // groupBox_TelegramSet
+            // 
+            this.groupBox_TelegramSet.Controls.Add(this.textBox_Telegram);
+            this.groupBox_TelegramSet.Controls.Add(this.label_Telegram_ChatId);
+            this.groupBox_TelegramSet.Controls.Add(this.label_TelegramAbout);
+            this.groupBox_TelegramSet.Controls.Add(this.checkBox_Telegram);
+            this.groupBox_TelegramSet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_TelegramSet.Location = new System.Drawing.Point(0, 0);
+            this.groupBox_TelegramSet.Name = "groupBox_TelegramSet";
+            this.groupBox_TelegramSet.Size = new System.Drawing.Size(426, 102);
+            this.groupBox_TelegramSet.TabIndex = 1;
+            this.groupBox_TelegramSet.TabStop = false;
+            this.groupBox_TelegramSet.Text = "텔레그램 알림";
+            // 
+            // textBox_Telegram
+            // 
+            this.textBox_Telegram.Enabled = false;
+            this.textBox_Telegram.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.textBox_Telegram.Location = new System.Drawing.Point(62, 18);
+            this.textBox_Telegram.MaxLength = 16;
+            this.textBox_Telegram.Name = "textBox_Telegram";
+            this.textBox_Telegram.Size = new System.Drawing.Size(156, 25);
+            this.textBox_Telegram.TabIndex = 11;
+            this.textBox_Telegram.TextChanged += new System.EventHandler(this.textBox_Telegram_TextChanged);
+            // 
+            // label_Telegram_ChatId
+            // 
+            this.label_Telegram_ChatId.AutoSize = true;
+            this.label_Telegram_ChatId.Location = new System.Drawing.Point(10, 21);
+            this.label_Telegram_ChatId.Name = "label_Telegram_ChatId";
+            this.label_Telegram_ChatId.Size = new System.Drawing.Size(56, 17);
+            this.label_Telegram_ChatId.TabIndex = 12;
+            this.label_Telegram_ChatId.Text = "Chat ID:";
+            // 
+            // label_TelegramAbout
+            // 
+            this.label_TelegramAbout.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.label_TelegramAbout.Location = new System.Drawing.Point(10, 45);
+            this.label_TelegramAbout.Name = "label_TelegramAbout";
+            this.label_TelegramAbout.Size = new System.Drawing.Size(407, 53);
+            this.label_TelegramAbout.TabIndex = 13;
+            this.label_TelegramAbout.Text = "매칭이 되면 입력한 텔레그램 채팅방으로 메시지를 보내 해당 사실을 알립니다.\r\n원하는 돌발이 발생했을 시에도 메시지를 보내 해당 사실을 알립니다." +
+    "\r\n채팅방 ID는 DFAssist Notify Bot에게 아무 메시지나 보내면 확인할 수 있습니다.";
+            // 
+            // checkBox_Telegram
+            // 
+            this.checkBox_Telegram.AutoSize = true;
+            this.checkBox_Telegram.Location = new System.Drawing.Point(224, 20);
+            this.checkBox_Telegram.Name = "checkBox_Telegram";
+            this.checkBox_Telegram.Size = new System.Drawing.Size(66, 21);
+            this.checkBox_Telegram.TabIndex = 14;
+            this.checkBox_Telegram.Text = "활성화";
+            this.checkBox_Telegram.UseVisualStyleBackColor = true;
+            this.checkBox_Telegram.CheckedChanged += new System.EventHandler(this.checkBox_Telegram_CheckedChanged);
             // 
             // tabPage_Advanced
             // 
@@ -713,7 +854,7 @@
             // 
             this.toolStripMenuItem_SelectApply.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem_SelectApply.Name = "toolStripMenuItem_SelectApply";
-            this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem_SelectApply.Size = new System.Drawing.Size(67, 20);
             this.toolStripMenuItem_SelectApply.Text = "적용하기";
             this.toolStripMenuItem_SelectApply.Click += new System.EventHandler(this.toolStripMenuItem_SelectApply_Click);
             // 
@@ -800,7 +941,7 @@
             this.label_About.TabIndex = 0;
             this.label_About.Text = "[제작 및 문의]\r\n유채색\r\n라그린네\r\n히비야\r\n\r\n[저작권]\r\n기재되어있는 회사명 · 제품명 · 시스템 이름은\r\n해당 소유자의 상표 또는 등록 " +
     "상표입니다.\r\n(C) 2010 - 2017 SQUARE ENIX CO., LTD All Rights Reserved.\r\nKorea Publish" +
-    "ed by EYEDENTITY MOBILE.";
+    "ed by ACTOZ SOFT.";
             this.label_About.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel_GitHub
@@ -1087,7 +1228,7 @@
             this.label_Process.ForeColor = System.Drawing.Color.Gray;
             this.label_Process.Location = new System.Drawing.Point(5, 5);
             this.label_Process.Name = "label_Process";
-            this.label_Process.Size = new System.Drawing.Size(101, 17);
+            this.label_Process.Size = new System.Drawing.Size(100, 17);
             this.label_Process.TabIndex = 0;
             this.label_Process.Text = "FFXIV 프로세스";
             // 
@@ -1118,10 +1259,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPage_Settings.ResumeLayout(false);
-            this.groupBox_UpdateNote.ResumeLayout(false);
-            this.groupBox_UpdateNote.PerformLayout();
             this.groupBox_DefaultSet.ResumeLayout(false);
             this.groupBox_DefaultSet.PerformLayout();
+            this.tabPage_3rdParty.ResumeLayout(false);
+            this.groupBox_DiscordSet.ResumeLayout(false);
+            this.groupBox_DiscordSet.PerformLayout();
+            this.groupBox_TelegramSet.ResumeLayout(false);
+            this.groupBox_TelegramSet.PerformLayout();
             this.tabPage_Advanced.ResumeLayout(false);
             this.groupBox_CustomHttpRequest.ResumeLayout(false);
             this.groupBox_CustomHttpRequest.PerformLayout();
@@ -1204,8 +1348,6 @@
         private System.Windows.Forms.CheckBox checkBox_CustomSound;
         private System.Windows.Forms.Button button_getSoundFile;
         private System.Windows.Forms.Label label_CustomSoundFileName;
-        private System.Windows.Forms.GroupBox groupBox_UpdateNote;
-        private System.Windows.Forms.Label label_UpdateNote;
         private System.Windows.Forms.CheckBox checkBox_useVPN;
         private System.Windows.Forms.TabPage tabPage_Advanced;
         private System.Windows.Forms.GroupBox groupBox_CustomHttpRequest;
@@ -1239,6 +1381,19 @@
         public System.Windows.Forms.TextBox textBox_OpcodeFilterList;
         public System.Windows.Forms.CheckBox checkBox_filterOpcode;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tabPage_3rdParty;
+        private System.Windows.Forms.GroupBox groupBox_DiscordSet;
+        private System.Windows.Forms.TextBox textBox_Discord;
+        private LocalizableLabel label_DiscordAt;
+        private LocalizableLabel label_DiscordAbout;
+        private System.Windows.Forms.CheckBox checkBox_Discord;
+        private System.Windows.Forms.LinkLabel linkLabel_DiscordServer;
+        private System.Windows.Forms.GroupBox groupBox_TelegramSet;
+        private System.Windows.Forms.TextBox textBox_Telegram;
+        private LocalizableLabel label_TelegramAbout;
+        private System.Windows.Forms.CheckBox checkBox_Telegram;
+        private LocalizableLabel label_Telegram_ChatId;
+        private System.Windows.Forms.LinkLabel linkLabel_Telegram;
     }
 }
 
