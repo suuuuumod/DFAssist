@@ -202,8 +202,16 @@ namespace App
                     {
                         try
                         {
-
-                            if (opcode == Int32.Parse(mainForm.textBox_Opcode.Text))
+                            int check_opcode;
+                            if (mainForm.checkBox_hexadecimal.Checked)
+                            {
+                                check_opcode = Convert.ToInt32(mainForm.textBox_Opcode.Text, 16);
+                            }
+                            else
+                            {
+                                check_opcode = Int32.Parse(mainForm.textBox_Opcode.Text);
+                            }
+                            if (opcode == check_opcode)
                             {
                                 opcodeData.RemoveRange(0, opcodeData.Count);
                                 mainForm.label_OpcodeDataLength.Text = data.Length.ToString();
