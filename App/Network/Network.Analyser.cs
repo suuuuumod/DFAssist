@@ -342,6 +342,10 @@ namespace App
                                 WebApi.customHttpRequest("fate-occured", fate.Name);
                             }
                         }
+                        else if (mainForm.checkBox_checkFATEs.Checked)
+                        {
+                            Log.D("발견 돌발임무: \"{0}\"", code);
+                        }
                     }
                 }
                 /*else if (opcode == 0x006C) // 3.5 cross-world 파티 참가하면 문제가 발생하는 부분.
