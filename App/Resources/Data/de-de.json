@@ -954,25 +954,25 @@
     // 4.0 Stormblood
     // 4.0 Dungeons
     "238": {
-      "name": "The Sirensong Sea",
+      "name": "Sirenen-See",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "235": {
-      "name": "Shisui of the Violet Tides",
+      "name": "Shisui",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "240": {
-      "name": "Bardam's Mettle",
+      "name": "Bardams Probe",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "241": {
-      "name": "Doma Castle",
+      "name": "Burg Doma",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -990,13 +990,13 @@
       "dps": "2"
     },
     "262": {
-      "name": "Kugane Castle",
+      "name": "Schloss Kugane",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "236": {
-      "name": "The Temple of the Fist",
+      "name": "Tempel der Faust",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1004,31 +1004,31 @@
 
     // 4.0 Trials
     "243": {
-      "name": "The Pool of Tribute",
+      "name": "Götterdämmerung - Susano",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "244": {
-      "name": "The Pool of Tribute (Extreme)",
+      "name": "Zenit der Götter - Susano",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "263": {
-      "name": "Emanation",
+      "name": "Götterdämmerung - Lakshmi",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "264": {
-      "name": "Emanation (Extreme)",
+      "name": "Zenit der Götter - Lakshmi",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "239": {
-      "name": "The Royal Menagerie",
+      "name": "Königliche Menagerie",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1036,25 +1036,25 @@
 
     // 4.01 Raids
     "252": {
-      "name": "Deltascape V1.0",
+      "name": "Deltametrie 1.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "253": {
-      "name": "Deltascape V2.0",
+      "name": "Deltametrie 2.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "254": {
-      "name": "Deltascape V3.0",
+      "name": "Deltametrie 3.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "255": {
-      "name": "Deltascape V4.0",
+      "name": "Deltametrie 4.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1062,25 +1062,25 @@
 
     // 4.05 Raids
     "256": {
-      "name": "Deltascape V1.0 (Savage)",
+      "name": "Deltametrie 1.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "257": {
-      "name": "Deltascape V2.0 (Savage)",
+      "name": "Deltametrie 2.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "258": {
-      "name": "Deltascape V3.0 (Savage)",
+      "name": "Deltametrie 3.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "259": {
-      "name": "Deltascape V4.0 (Savage)",
+      "name": "Deltametrie 4.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1088,7 +1088,7 @@
 
     //4.05 Party Contents
     "268": {
-      "name": "The Lost Canals of Uznair",
+      "name": "Kanäle von Uznair",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1098,7 +1098,7 @@
     // 4.1 The Legend Returns
     // 4.1 Dungeon
     "279": {
-      "name": "The Drowned City of Skalla",
+      "name": "Die versunkene Stadt Skalla",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1106,7 +1106,7 @@
 
     // 4.1 Trials
     "278": {
-      "name": "The Minstrel's Ballad: Shinryu's Domain",
+      "name": "Heldenlied von Shinryu",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1114,7 +1114,7 @@
 
     // 4.1 Raids
     "281": {
-      "name": "The Royal City of Rabanastre",
+      "name": "Rabanastre",
       "tank": "3",
       "healer": "6",
       "dps": "15"
@@ -1122,7 +1122,7 @@
 
     //4.1 Party Contents
     "276": {
-      "name": "The Hidden Canals of Uznair",
+      "name": "Vergessene Kanäle von Uznair",
       "tank": "0",
       "healer": "0",
       "dps": "0"
@@ -1130,7 +1130,7 @@
 
     //4.11 Raids
     "280": {
-      "name": "Unending Coil of Bahamut (Ultimate)",
+      "name": "Endlose Schatten von Bahamut (fatal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1139,13 +1139,13 @@
     // 4.2 Rise of a New Sun
     // 4.2 Dungeon
     "284": {
-      "name": "Hells' Lid",
+      "name": "Höllenspund",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "285": {
-      "name": "the Fractal Continuum (Hard)",
+      "name": "Die Fraktal-Kontinuum (schwer)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1153,13 +1153,13 @@
 
     // 4.2 Trials
     "290": {
-      "name": "Jade Stoa",
+      "name": "Seelentanz - Byakko",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "291": {
-      "name": "Jade Stoa (Extreme)",
+      "name": "Seelensturm - Byakko",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1167,49 +1167,49 @@
 
     // 4.2 Raids
     "286": {
-      "name": "Sigmascape V1.0",
+      "name": "Sigmametrie 1.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "287": {
-      "name": "Sigmascape V2.0",
+      "name": "Sigmametrie 2.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "288": {
-      "name": "Sigmascape V3.0",
+      "name": "Sigmametrie 3.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "289": {
-      "name": "Sigmascape V4.0",
+      "name": "Sigmametrie 4.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "292": {
-      "name": "Sigmascape V1.0 (Savage)",
+      "name": "Sigmametrie 1.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "293": {
-      "name": "Sigmascape V2.0 (Savage)",
+      "name": "Sigmametrie 2.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "294": {
-      "name": "Sigmascape V3.0 (Savage)",
+      "name": "Sigmametrie 3.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "295": {
-      "name": "Sigmascape V4.0 (Savage)",
+      "name": "Sigmametrie 4.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1218,7 +1218,7 @@
     // 4.3 Under the MoonLight
     // 4.3 Dungeon
     "536": {
-      "name": "The Swallow's Compass",
+      "name": "Kompass der Schwalbe",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1226,13 +1226,13 @@
 
     // 4.3 Trials
     "537": {
-      "name": "Castrum Fluminis",
+      "name": "Götterdämmerung - Tsukuyomi",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "538": {
-      "name": "the Minstrel's Ballad: Tsukuyomi's Pain",
+      "name": "Zenit der Götter - Tsukuyomi",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1240,7 +1240,7 @@
 
     // 4.3 Raids
     "550": {
-      "name": "The Ridorana Lighthouse",
+      "name": "Richtfeuer von Ridorana",
       "tank": "3",
       "healer": "6",
       "dps": "15"
@@ -1248,7 +1248,7 @@
 
     // 4.31 Raids
     "539": {
-      "name": "The Weapon's Refrain (Ultimate)",
+      "name": "Heldenlied von Ultima (fatal)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1256,13 +1256,13 @@
 
     //4.36 Trials
     "474": {
-      "name": "The Great Hunt",
+      "name": "Jagd auf Rathalos",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "475": {
-      "name": "The Great Hunt (Extreme)",
+      "name": "Jagd auf Rathalos (schwer)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1271,13 +1271,13 @@
     // 4.4 Prelude in Violet
     // 4.4 Dungeon
     "585": {
-      "name": "The Burn",
+      "name": "Das Kargland",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "584": {
-      "name": "Saint Mocianne's Arboretum (Hard)",
+      "name": "Sankt Mocianne-Arboretum (schwer)",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1285,13 +1285,13 @@
 
     // 4.4 Trials
     "596": {
-      "name": "Hells' Kier",
+      "name": "Seelentanz - Suzaku",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "597": {
-      "name": "Hells' Kier (Extreme)",
+      "name": "Seelensturm - Suzaku",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1300,59 +1300,58 @@
     // 4.4 Raids
 
     "587": {
-      "name": "Alphascape V1.0",
+      "name": "Alphametrie 1.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "588": {
-      "name": "Alphascape V2.0",
+      "name": "Alphametrie 2.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "589": {
-      "name": "Alphascape V3.0",
+      "name": "Alphametrie 3.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "590": {
-      "name": "Alphascape V4.0",
+      "name": "Alphametrie 4.0",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "591": {
-      "name": "Alphascape V1.0 (Savage)",
+      "name": "Alphametrie 1.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "592": {
-      "name": "Alphascape V2.0 (Savage)",
+      "name": "Alphametrie 2.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "593": {
-      "name": "Alphascape V3.0 (Savage)",
+      "name": "Alphametrie 3.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "594": {
-      "name": "Alphascape V4.0 (Savage)",
+      "name": "Alphametrie 4.0 (episch)",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
 
     // 4.45
-    // Read the KR Script.
 
     "595": {
-      "name": "Kugane Ohashi",
+      "name": "Duell auf der Kugane-Brücke",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1361,7 +1360,7 @@
     // 4.5 A Requiem for Heroes
     // 4.5 Dungeon
     "611": {
-      "name": "The Ghimlyt Dark",
+      "name": "Die Ghimlyt-Finsternis",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1369,13 +1368,13 @@
 
     // 4.5 Trials
     "637": {
-      "name": "The Wreath of Snakes",
+      "name": "Seelentanz - Seiryu",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "638": {
-      "name": "The Wreath of Snakes (Extreme)",
+      "name": "Seelensturm - Seiryu",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1383,7 +1382,7 @@
 
     // 4.5 Raids
     "636": {
-      "name": "The Orbonne Monastery",
+      "name": "Kloster von Orbonne",
       "tank": "3",
       "healer": "6",
       "dps": "15"
@@ -1392,7 +1391,7 @@
     // 5.0 Shadowbringers
     // 5.0 Dungeons
     "676": {
-      "name": "Holminster Switch",
+      "name": "Holminster",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1404,19 +1403,19 @@
       "dps": "2"
     },
     "651": {
-      "name": "the Qitana Ravel",
+      "name": "Irrungen der Qitari",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "656": {
-      "name": "Malikah's Well",
+      "name": "Malikahs Brunnen",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "659": {
-      "name": "Mt. Gulg",
+      "name": "Der Gulg",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1428,7 +1427,7 @@
       "dps": "2"
     },
     "655": {
-      "name": "the Twinning",
+      "name": "Der Kristallzwilling",
       "tank": "1",
       "healer": "1",
       "dps": "2"
@@ -1442,31 +1441,31 @@
 
     // 5.0 Trials
     "657": {
-      "name": "the Dancing Plague",
+      "name": "Offenbarung - Titania",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "658": {
-      "name": "the Dancing Plague (Extreme)",
+      "name": "Letzte Läuterung - Titania",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "666": {
-      "name": "the Crown of the Immaculate",
+      "name": "Offenbarung - Innozenz",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "667": {
-      "name": "the Crown of the Immaculate (Extreme)",
+      "name": "Letzte Läuterung - Innozenz",
       "tank": "2",
       "healer": "2",
       "dps": "4"
     },
     "687": {
-      "name": "the Dying Gasp",
+      "name": "Offenbarung - Hades",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1475,85 +1474,85 @@
 
     // Guildhests
     "43": {
-      "name": "Under the Armor",
+      "name": "Bockmanns Gefolge",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "46": {
-      "name": "Pulling Poison Posies",
+      "name": "Unkraut jäten",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "47": {
-      "name": "Stinging Back",
+      "name": "Ins Wespennest stechen",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "42": {
-      "name": "Basic Training: Enemy Parties",
+      "name": "Einer für alle, alle für einen",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "44": {
-      "name": "Basic Training: Enemy Strongholds",
+      "name": "Sturmkommando",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "45": {
-      "name": "Hero on the Half Shell",
+      "name": "Gil oder Leben",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "49": {
-      "name": "Flicking Sticks and Taking Names",
+      "name": "Bombige Goblins",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "48": {
-      "name": "All's Well that Ends in the Well",
+      "name": "Briaxio ausschalten",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "50": {
-      "name": "More than a Feeler",
+      "name": "Tödliches Rankenspiel",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "51": {
-      "name": "Annoy the Void",
+      "name": "Gefahr aus dem Nichts",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "52": {
-      "name": "Shadow and Claw",
+      "name": "Kampf gegen Schatten",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "53": {
-      "name": "Long Live the Queen",
+      "name": "Miss Bombastic",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "54": {
-      "name": "Ward Up",
+      "name": "Unzertrennlich",
       "tank": "1",
       "healer": "1",
       "dps": "2"
     },
     "55": {
-      "name": "Solemn Trinity",
+      "name": "Wuchtige Dreifaltigkeit",
       "tank": "2",
       "healer": "2",
       "dps": "4"
@@ -1561,67 +1560,67 @@
 
     // Blue Mage 4.5
     "610": {
-      "name": "All's Well That Starts Well",
+      "name": "Debüt in der Himmlischen Arena",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "612": {
-      "name": "Much Ado About Pudding",
+      "name": "Pudding nach Art des Hauses",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "613": {
-      "name": "Waiting for Golem",
+      "name": "Zipacna - Aller Anfang ist schwer",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "614": {
-      "name": "Gentlemen Prefer Swords",
+      "name": "Kreios - Der Mann aus Stahl",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "615": {
-      "name": "The Threepenny Turtles",
+      "name": "Die Bruderschaft der Kröten",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "616": {
-      "name": "Eye Society",
+      "name": "Den Tod im Auge",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "617": {
-      "name": "A Chorus Slime",
+      "name": "Heißkalte Schauer",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "618": {
-      "name": "Bomb-edy of Errors",
+      "name": "Explosiv - Vorhut in Blau und Rot",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "619": {
-      "name": "To Kill a Mockingslime",
+      "name": "Guimauve und die sieben Gesichter des Todes",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "620": {
-      "name": "A Little Knight Music",
+      "name": "Crom Dubh - König der Götzen",
       "tank": "0",
       "healer": "0",
       "dps": "0"
     },
     "621": {
-      "name": "Some Like It Excruciatingly Hot",
+      "name": "Explosiv - Die zweite Welle",
       "tank": "0",
       "healer": "0",
       "dps": "0"
